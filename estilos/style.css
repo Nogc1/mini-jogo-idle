@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+* {
+    background-color: rgb(54, 158, 54);
+    margin: 0px;
+    padding: 0px;
+}
+
+html, body {
+    height: 100vh;
+    width: 100vw;
+}
+
+main {
+    margin: auto;
+    display: block;
+}
+div#contador {
+    text-align: center;
+    margin: auto;
+    padding-top: 20px;
+    margin-bottom: 20px;
+    display: block;
+    width: 100px;
+}
+div#bola {
+    margin: auto;
+    display: block;
+    margin-bottom: 50px;
+    position: relative;
+    background-image: url("../imagens/bola-de-futebol-1.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 200px;
+    height: 200px;
+}
+
+section {
+    margin: auto;
+    display: block;
+    height: 100px;
+    width: 300px;
+}
+input.upgrades {
+    /* color: white; */
+    text-align: center;
+    width: 100px;
+    height: 30px;
+    /* background-color: rgb(54, 21, 21); */
+    padding: 5px;
+    margin: 10px;
+    display: inline-block;
+    /* border-color: rgb(68, 29, 29); */
+}
