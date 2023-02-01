@@ -1,5 +1,12 @@
 @charset "UTF-8";
 
+
+/* PALETA DE CORES
+
+    Marrons: rgb(54, 21, 21) 
+             rgb(68, 29, 29)            
+
+*/
 * {
     background-color: rgb(54, 158, 54);
     margin: 0px;
@@ -36,19 +43,29 @@ div#bola {
 }
 
 section {
+    background-color: rgb(138, 87, 53);
     margin: auto;
     display: block;
-    height: 100px;
-    width: 300px;
 }
+
 input.upgrades {
-    /* color: white; */
+    color: white;
     text-align: center;
     width: 100px;
     height: 30px;
-    /* background-color: rgb(54, 21, 21); */
+    background-color: rgb(54, 21, 21);
     padding: 5px;
     margin: 10px;
     display: inline-block;
-    /* border-color: rgb(68, 29, 29); */
+    border-color: rgb(68, 29, 29);
+}
+
+input.upgrades:hover {
+    background-color: rgb(138, 87, 53);
+}
+
+input.upgrades:disabled {
+    background-color: rgba(75, 50, 50, 0.548);
+    border-color: rgba(48, 30, 30, 0.61);
+    color: rgba(255, 255, 255, 0.459);
 }
