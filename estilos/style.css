@@ -18,10 +18,6 @@ html, body {
     width: 100vw;
 }
 
-main {
-    margin: auto;
-    display: block;
-}
 div#contador {
     text-align: center;
     margin: auto;
@@ -44,7 +40,8 @@ div#bola {
 
 section {
     background-color: rgb(138, 87, 53);
-    margin: auto;
+    margin: 0px;
+    padding: 0px;
     display: block;
 }
 

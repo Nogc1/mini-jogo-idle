@@ -13,9 +13,11 @@
 <body>
     <div id="contador"></div>
     <div id="bola" onclick="contagem()"></div>
-    <section>
-        <input type="button" value="Autoclick 20" id="autoclick" class="upgrades" onclick="autoclick()">
-        <input type="button" value="Clique 10" id="clique" class="upgrades" onclick="clique()">
+    <section> 
+        <!-- Botões de farm -->
+        <input type="button" value="Passe 20" id="passe" class="upgrades" onclick="clique(this.id)">
+        <input type="button" value="Chute 10" id="chute" class="upgrades" onclick="clique(this.id)">
+        <input type="button" value="Chuteira 50" id="chuteira" class="upgrades" onclick="clique(this.id)">
     </section>
     <script src="script.js"></script>
 </body>
