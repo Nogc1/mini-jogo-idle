@@ -4,7 +4,8 @@
 /* PALETA DE CORES
 
     Marrons: rgb(54, 21, 21) 
-             rgb(68, 29, 29)            
+             rgb(68, 29, 29)
+             rgb(37, 19, 5)        
 
 */
 * {
@@ -38,15 +39,32 @@ div#bola {
     height: 200px;
 }
 
-section {
+section.upgrades {
     background-color: rgb(138, 87, 53);
     margin: 0px;
     padding: 0px;
     display: block;
 }
 
+section.buffs {
+    background-color: rgb(37, 19, 5);
+    width: 216px;
+    margin-left: 20px;
+    display: none;
+}
+
+div.buffs {
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    background-color: rgb(54, 21, 21);
+    margin: 5px;
+    display: inline-block;
+    border-color: rgb(68, 29, 29);
+}
+
 input.upgrades {
-    color: white;
+    color: rgb(151, 19, 19);
     text-align: center;
     width: 100px;
     height: 30px;
@@ -64,5 +82,5 @@ input.upgrades:hover {
 input.upgrades:disabled {
     background-color: rgba(75, 50, 50, 0.548);
     border-color: rgba(48, 30, 30, 0.61);
-    color: rgba(255, 255, 255, 0.459);
+    color: rgba(151, 19, 19, 0.747);
 }
