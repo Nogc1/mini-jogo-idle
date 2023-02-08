@@ -53,8 +53,7 @@ section.buffs {
     display: none;
 }
 
-div.buffs {
-    text-align: center;
+input.buffs {
     width: 30px;
     height: 30px;
     background-color: rgb(54, 21, 21);
