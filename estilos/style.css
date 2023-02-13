@@ -40,10 +40,12 @@ div#bola {
 }
 
 section.upgrades {
-    background-color: rgb(138, 87, 53);
+    background-color: rgb(37, 19, 5);
     margin: 0px;
     padding: 0px;
     display: block;
+    position: absolute;
+    bottom: 0;
 }
 
 section.buffs {
@@ -51,6 +53,8 @@ section.buffs {
     width: 216px;
     margin-left: 20px;
     display: none;
+    position: absolute;
+    bottom: 110px;
 }
 
 input.buffs {
@@ -61,12 +65,19 @@ input.buffs {
     display: inline-block;
     border-color: rgb(68, 29, 29);
 }
+input.buffs:hover {
+    background-color: rgb(58, 28, 28);
+}
+input.buffs:disabled {
+    background-color: rgba(75, 50, 50, 0.548);
+    border-color: rgba(48, 30, 30, 0.61);
+}
 
 input.upgrades {
     color: rgb(151, 19, 19);
     text-align: center;
-    width: 100px;
-    height: 30px;
+    width: 125px;
+    height: 35px;
     background-color: rgb(54, 21, 21);
     padding: 5px;
     margin: 10px;
@@ -75,7 +86,7 @@ input.upgrades {
 }
 
 input.upgrades:hover {
-    background-color: rgb(138, 87, 53);
+    background-color: rgb(58, 28, 28);
 }
 
 input.upgrades:disabled {

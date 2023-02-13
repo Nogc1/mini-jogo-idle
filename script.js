@@ -23,6 +23,8 @@ var valor_cabeçada = 50000
 // Preço dos buffs
 var valor_chuteira = 1000
 
+var cont_buff = 0
+
 // Quanto cada um gera  obs. Valor inicial
 var passe = 0
 var chutes = 0
@@ -212,19 +214,16 @@ function verif_upgrade(clicado) {
 
     contador.innerHTML =`<p>Gols: ${gols.toFixed(0)}</p>`
 }
+
 // Área de buffs
 function verif_buff(obtido) {
     if (obtido == 'chuteira') {
         cps_chute += 3
         cps_passe += 2
         cps_escanteio += 1
-        if (gols < valor_chuteira) {
-            chuteira_html.disabled = true
-        } else {
-            chuteira_html.disabled = false
-        }
         chuteira_html.style.display = 'none'
-    } 
+        cont_buff = 1
+    }
     if (obtido == 'camiseta') {
 
     } 
@@ -289,9 +288,14 @@ function aut() {
     }
 
     // Verifica se o buff pode ser comprado
-    if (gols >= 700) {
+    if (gols >= 700 && cont_buff == 0) {
         section_html.style.display = 'block'
         chuteira_html.style.display = 'inline-block'
+        if (gols > valor_chuteira) {
+            chuteira_html.disabled = false
+        } else {
+            chuteira_html.disabled = true
+        }
     }
     
 
