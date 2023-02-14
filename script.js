@@ -11,19 +11,19 @@ let cabeçada_html = document.getElementById('cabeçada')
 // Botões de buffs
 let section_html = document.getElementById('buff')
 let chuteira_html = document.getElementById('chuteira')
+let camiseta_html = document.getElementById('camiseta')
 
 
 // Preço dos upgrades
-var valor_chute = 10
-var valor_passe = 20
+var valor_chute = 30
+var valor_passe = 10
 var valor_escanteio = 50
 var valor_lateral = 1000
 var valor_cabeçada = 50000
 
 // Preço dos buffs
 var valor_chuteira = 1000
-
-var cont_buff = 0
+var valor_camiseta = 10000
 
 // Quanto cada um gera  obs. Valor inicial
 var passe = 0
@@ -33,8 +33,8 @@ var lateral = 0
 var cabeçada = 0
 
 // cps
-var cps_chute = 3
-var cps_passe = 1
+var cps_chute = 2.5
+var cps_passe = 0.8
 var cps_escanteio = 5
 var cps_lateral = 100
 var cps_cabeçada = 500
@@ -218,14 +218,14 @@ function verif_upgrade(clicado) {
 // Área de buffs
 function verif_buff(obtido) {
     if (obtido == 'chuteira') {
-        cps_chute += 3
-        cps_passe += 2
+        cps_chute += 2.5
+        cps_passe += 1.3
         cps_escanteio += 1
         chuteira_html.style.display = 'none'
-        cont_buff = 1
     }
     if (obtido == 'camiseta') {
-
+        cps_lateral += 5
+        camiseta_html.style.display = 'none'
     } 
     if (obtido == 'caneleira') {
 
@@ -288,13 +288,17 @@ function aut() {
     }
 
     // Verifica se o buff pode ser comprado
-    if (gols >= 700 && cont_buff == 0) {
+    if (gols >= 700) {
         section_html.style.display = 'block'
-        chuteira_html.style.display = 'inline-block'
         if (gols > valor_chuteira) {
             chuteira_html.disabled = false
         } else {
             chuteira_html.disabled = true
+        }
+        if (gols > valor_camiseta) {
+            camiseta_html.disabled = false
+        } else {
+            camiseta_html.disabled = true
         }
     }
     
