@@ -46,10 +46,27 @@ section.upgrades {
 section.buffs {
     background-color: rgb(37, 19, 5);
     width: 216px;
+    max-height: 111px;
     margin-left: 20px;
     display: none;
     position: fixed;
     bottom: 110px;
+}
+section.powerups {
+    max-width: 30px;
+    /* position: absolute;
+    right: 10px;
+    top: 20px; */
+    background-color: white;
+}
+
+div.powerup {
+    background-color: white;
+    border: 10px;
+    border-color: rgb(68, 29, 29);
+    border-radius: 10px;
+    width: 50px;
+    height: 40px;
 }
 
 input.buffs {
@@ -68,12 +85,13 @@ input.buffs:disabled {
 }
 
 input.upgrades {
+    text-align: left;
     color: rgb(151, 19, 19);
-    width: 125px;
-    height: 35px;
+    width: 150px;
+    height: 40px;
     background-color: rgb(54, 21, 21);
     padding: 5px;
-    margin: 10px;
+    margin: 8px 3px 5px 10px;
     border-color: rgb(68, 29, 29);
 }
 

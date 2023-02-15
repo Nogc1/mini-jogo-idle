@@ -7,12 +7,15 @@ let passe_html = document.getElementById('passe')
 let escanteio_html = document.getElementById('escanteio')
 let lateral_html = document.getElementById('lateral')
 let cabeçada_html = document.getElementById('cabeçada')
+let agarrar_html = document.getElementById('agarrar')
 
 // Botões de buffs
 let section_html = document.getElementById('buff')
 let chuteira_html = document.getElementById('chuteira')
 let camiseta_html = document.getElementById('camiseta')
-
+let caneleira_html = document.getElementById('caneleira')
+let meia_html = document.getElementById('meia')
+let calção_html = document.getElementById('calção')
 
 // Preço dos upgrades
 var valor_chute = 30
@@ -20,10 +23,14 @@ var valor_passe = 10
 var valor_escanteio = 50
 var valor_lateral = 1000
 var valor_cabeçada = 50000
+var valor_agarrar = 500000
 
 // Preço dos buffs
 var valor_chuteira = 1000
-var valor_camiseta = 10000
+var valor_camiseta = 50000
+var valor_caneleira = 100000
+var valor_meia = 1000000
+var valor_calção = 1200000
 
 // Quanto cada um gera  obs. Valor inicial
 var passe = 0
@@ -31,6 +38,7 @@ var chutes = 0
 var escanteio = 0
 var lateral = 0
 var cabeçada = 0
+var agarrar = 0
 
 // cps
 var cps_chute = 2.5
@@ -38,6 +46,7 @@ var cps_passe = 0.8
 var cps_escanteio = 5
 var cps_lateral = 100
 var cps_cabeçada = 500
+var cps_agarrar = 1000
 
 // Contador
 var gols = 0
@@ -52,6 +61,7 @@ passe_html.disabled = true
 escanteio_html.disabled = true
 lateral_html.disabled = true
 cabeçada_html.disabled = true
+agarrar_html.disabled = true
 
 // Inicia o contador
 function contagem() {
@@ -211,7 +221,40 @@ function verif_upgrade(clicado) {
             gols = 0
         }
     }
+    else if (clicado == 'agarrar') {
+        gols -= valor_agarrar
+        if (gols < valor_chute) {
+            chute_html.disabled = true
+            chute_html.style.color = 'rgb(151, 19, 19)'
+        }
+        if (gols < valor_passe) {
+            passe_html.disabled = true
+            passe_html.style.color = 'rgb(151, 19, 19)'
+        }
+        if (gols < valor_escanteio) {
+            escanteio_html.disabled = true
+            escanteio_html.style.color = 'rgb(151, 19, 19)'
+        }
+        if (gols < valor_lateral) {
+            lateral_html.disabled = true
+            lateral_html.style.color = 'rgb(151, 19, 19)'
+        }
+        if (gols < valor_cabeçada) {
+            cabeçada_html.disabled = true
+            cabeçada_html.style.color = 'rgb(151, 19, 19)'
+        }
+        if (gols < valor_agarrar) {
+            agarrar_html.disabled = true
+            agarrar_html.style.color = 'rgb(151, 19, 19)'
+        }
 
+        valor_agarrar *= 1.5
+        agarrar += cps_agarrar
+
+        if (gols < 0) {
+            gols = 0
+        }
+    }
     contador.innerHTML =`<p>Gols: ${gols.toFixed(0)}</p>`
 }
 
@@ -228,18 +271,24 @@ function verif_buff(obtido) {
         camiseta_html.style.display = 'none'
     } 
     if (obtido == 'caneleira') {
-
+        cps_chute += 1.1
+        cps_agarrar += 2
+        caneleira_html.style.display = 'none'
     }
     if (obtido == 'meia') {
-
+        cps_escanteio += 3
+        cps_lateral += 2
+        meia_html.style.display = 'none'
     }
     if (obtido == 'calção') {
-
+        cps_cabeçada += 1
+        cps_lateral += 3
+        cps_agarrar += 4
+        calção_html.style.display = 'none'
     }
 }
 
 function aut() {
-
     // Verifica se o upgrade pode ser comprado
     if (gols >= valor_chute) {
         chute_html.disabled = false
@@ -262,6 +311,10 @@ function aut() {
     if (gols >= valor_cabeçada) {
         cabeçada_html.disabled = false
         cabeçada_html.style.color = 'rgb(54, 158, 54)'
+    }
+    if (gols >= valor_agarrar) {
+        agarrar_html.disabled = false
+        agarrar_html.style.color = 'rgb(54, 158, 54)'
     }
 
     if (gols < valor_chute) {
@@ -286,6 +339,10 @@ function aut() {
         cabeçada_html.disabled = true
         cabeçada_html.style.color = 'rgb(151, 19, 19)'
     }
+    if (gols < valor_agarrar) {
+        agarrar_html.disabled = true
+        agarrar_html.style.color = 'rgb(151, 19, 19)'
+    }
 
     // Verifica se o buff pode ser comprado
     if (gols >= 700) {
@@ -299,6 +356,21 @@ function aut() {
             camiseta_html.disabled = false
         } else {
             camiseta_html.disabled = true
+        }
+        if (gols > valor_caneleira) {
+            caneleira_html.disabled = false
+        } else {
+            caneleira_html.disabled = true
+        }
+        if (gols > valor_meia) {
+            meia_html.disabled = false
+        } else {
+            meia_html.disabled = true
+        }
+        if (gols > valor_calção) {
+            calção_html.disabled = false
+        } else {
+            calção_html.disabled = true
         }
     }
     
