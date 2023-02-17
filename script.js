@@ -1,6 +1,11 @@
 // Botão de gols
 let contador = document.getElementById('contador')
 
+// Botões de powerup
+let carrinho_html = document.getElementById('carrinho')
+let simular_html =document.getElementById('simular')
+let drible_html = document.getElementById('drible')
+
 // Botões de upgrades
 let chute_html = document.getElementById('chute')
 let passe_html = document.getElementById('passe')
@@ -55,6 +60,11 @@ var gols_valor = 1
 // Atualiza o contador e as variaveis para o novo valor através da função aut
 setInterval(aut, 1000)
 
+// Cronômetro powerups
+let timer_carrinho = setInterval(300000)
+let timer_drible = setInterval(100000)
+let timer_simular = setInterval(300000)
+
 contador.innerHTML = `<p>Gols: ${gols.toFixed(0)}</p>`
 chute_html.disabled = true
 passe_html.disabled = true
@@ -62,6 +72,23 @@ escanteio_html.disabled = true
 lateral_html.disabled = true
 cabeçada_html.disabled = true
 agarrar_html.disabled = true
+
+function powerup(click) {
+    var porcent = gols * 20 / 100
+    function d100() {
+        return Math.floor(Math.random() * (100 - 1) + 1)
+    }
+    if (click == 'carrinho') {
+        if (d100() < 20) {
+            gols -= porcent
+        } else {
+            gols += porcent
+        }
+        
+        // carrinho_html.style.backgroundImage = 'linear-gradient(timer_carrinho, rgba(255, 255, 255, 0.712), black)'
+        // timer_carrinho
+    }
+}
 
 // Inicia o contador
 function contagem() {
