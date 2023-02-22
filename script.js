@@ -60,11 +60,6 @@ var gols_valor = 1
 // Atualiza o contador e as variaveis para o novo valor através da função aut
 setInterval(aut, 1000)
 
-// Cronômetro powerups
-let timer_carrinho = setInterval(300000)
-let timer_drible = setInterval(100000)
-let timer_simular = setInterval(300000)
-
 contador.innerHTML = `<p>Gols: ${gols.toFixed(0)}</p>`
 chute_html.disabled = true
 passe_html.disabled = true
@@ -74,26 +69,53 @@ cabeçada_html.disabled = true
 agarrar_html.disabled = true
 
 function powerup(click) {
+    // Cronômetro powerups
+    var timer_carrinho = setInterval(min_carrinho, 1000)
+    let timer_drible = setInterval(100000)
+    let timer_simular = setInterval(300000)
+
+    var min = 0
+    var porc_min = 100
+    var cont = 0
+
     var porcent = gols * 20 / 100
-    function d100() {
-        return Math.floor(Math.random() * (100 - 1) + 1)
-    }
+
     if (click == 'carrinho') {
         if (d100() < 20) {
             gols -= porcent
         } else {
             gols += porcent
         }
-        
-        // carrinho_html.style.backgroundImage = 'linear-gradient(timer_carrinho, rgba(255, 255, 255, 0.712), black)'
-        // timer_carrinho
+        carrinho_html.style.background = `linear-gradient(to top, rgba(255, 255, 255, 0.712) 100%, black)`
+        timer_carrinho
+    }
+    function min_carrinho() {
+        if (min < 3000) {
+            min += 1
+            cont += 1
+            if (cont == 10) {
+                porc_min -= 30
+                carrinho_html.style.background = `linear-gradient(to top, rgba(255, 255, 255, 0.712) ${porc_min}%, black)`
+                cont = 0
+            }
+            if (porc_min <= 0) {
+                carrinho_html.style.background = `linear-gradient(to top, black, black)`
+                porc_min = 100
+                min = 0
+                cont = 0
+                clearInterval(timer_carrinho)
+            }
+        }
+    }
+    function d100() {
+        return Math.floor(Math.random() * (100 - 1) + 1)
     }
 }
 
 // Inicia o contador
 function contagem() {
     gols += gols_valor
-    contador.innerHTML =`<p>Gols: ${gols.toFixed(0)}</p>`
+    contador.innerHTML = `<p>Gols: ${gols.toFixed(0)}</p>`
 }
 
 // Área de upgrades
