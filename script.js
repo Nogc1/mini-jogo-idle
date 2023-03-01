@@ -70,13 +70,13 @@ agarrar_html.disabled = true
 
 function powerup(click) {
     // Cronômetro powerups
-    var timer_carrinho = setInterval(min_carrinho, 1000)
-    let timer_drible = setInterval(100000)
-    let timer_simular = setInterval(300000)
+    let timer_carrinho = setInterval(min_carrinho, 1000)
+    let timer_drible = setInterval(min_drible, 1000)
+    let timer_simular = setInterval(min_simular, 1000)
 
-    var min = 0
-    var porc_min = 100
-    var cont = 0
+    var min1 = 0
+    var porc_min1 = 100
+    var cont1 = 0
 
     var porcent = gols * 20 / 100
 
@@ -89,24 +89,91 @@ function powerup(click) {
         carrinho_html.style.background = `linear-gradient(to top, rgba(255, 255, 255, 0.712) 100%, black)`
         timer_carrinho
     }
+    if (click == 'drible') {
+        var up = cps_chute
+        cps_chute *= 2
+        drible_html.style.background = `linear-gradient(to top, rgba(255, 255, 255, 0.712) 100%, black)`
+        timer_drible
+    }
+    if (click == 'simular') {
+        if (d100() < 20) {
+            gols -= porcent
+        } else {
+            gols += porcent
+        }
+        simular_html.style.background = `linear-gradient(to top, rgba(255, 255, 255, 0.712) 100%, black)`
+        timer_simular
+    }
+
     function min_carrinho() {
+        // let min1 = 0
+        // let porc_min1 = 100
+        // let cont1 = 0
+
+        if (min1 < 35) {
+            min1 += 1
+            cont1 += 1
+            if (cont1 == 5) {
+                porc_min1 -= 15
+                carrinho_html.style.background = `linear-gradient(to top, rgba(255, 255, 255, 0.712) ${porc_min1}%, black 0%)`
+                cont1 = 0
+            }
+            if (porc_min1 <= 0) {
+                carrinho_html.style.background = `linear-gradient(to top, black, black)`
+                porc_min1 = 100
+                min1 = 0
+                cont1 = 0
+                clearInterval(timer_carrinho)
+            }
+        }
+    }
+    
+    function min_drible() {
+        let min2 = 0
+        let porc_min2 = 100
+        let cont2 = 0
+
+        if (min2 < 60) {
+            min2 += 1
+            cont2 += 1
+            if (cont2 == 1) {
+                porc_min2 -= 1
+                drible_html.style.background = `linear-gradient(to top, rgba(255, 255, 255, 0.712) ${porc_min2}%, black 0%)`
+                cont2 = 0
+            }
+            if (porc_min2 <= 0) {
+                drible_html.style.background = `linear-gradient(to top, black, black)`
+                porc_min2 = 100
+                min2 = 0
+                cont2 = 0
+                cps_chute = up
+                clearInterval(timer_drible)
+            }
+        }
+    }
+    function min_simular() {
+        let min = 0
+        let porc_min = 100
+        let cont = 0
+
         if (min < 3000) {
             min += 1
             cont += 1
             if (cont == 10) {
                 porc_min -= 30
-                carrinho_html.style.background = `linear-gradient(to top, rgba(255, 255, 255, 0.712) ${porc_min}%, black)`
+                simular_html.style.background = `linear-gradient(to top, rgba(255, 255, 255, 0.712) ${porc_min}%, black 0%)`
                 cont = 0
             }
             if (porc_min <= 0) {
-                carrinho_html.style.background = `linear-gradient(to top, black, black)`
+                simular_html.style.background = `linear-gradient(to top, black, black)`
                 porc_min = 100
                 min = 0
                 cont = 0
-                clearInterval(timer_carrinho)
+                clearInterval(timer_simular)
             }
         }
     }
+
     function d100() {
         return Math.floor(Math.random() * (100 - 1) + 1)
     }
