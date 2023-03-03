@@ -58,7 +58,8 @@ var gols = 0
 var gols_valor = 1
 
 // Atualiza o contador e as variaveis para o novo valor através da função aut
-setInterval(aut, 1000)
+var automatic = setInterval(aut, 1000)
+automatic
 
 contador.innerHTML = `<p>Gols: ${gols.toFixed(0)}</p>`
 chute_html.disabled = true
@@ -148,10 +149,43 @@ function powerup(click) {
     if (click == 'simular') {
         var timer_simular = setInterval(min_simular, 1000)
 
-        if (d100() < 20) {
-            gols -= porcent
+        if (d100() < 40) {
+            var guard_chute = chutes
+            var guard_passe = passe
+            var guard_escanteio = escanteio
+            var guard_lateral = lateral
+            var guard_cabeçada = cabeçada
+            var guard_agarrar = agarrar
+            var guard_cpschute = cps_chute
+            var guard_cpspasse = cps_passe
+            var guard_cpsescanteio = cps_escanteio
+            var guard_cpslateral = cps_lateral
+            var guard_cpscabeçada = cps_cabeçada
+            var guard_cpsagarrar = cps_agarrar
+
+            chutes = 0
+            passe = 0
+            escanteio = 0
+            lateral = 0
+            cabeçada = 0
+            agarrar = 0
+            cps_chute = 0
+            cps_passe = 0
+            cps_escanteio = 0
+            cps_lateral = 0
+            cps_cabeçada = 0
+            cps_agarrar = 0
+
+            chute_html.disabled = true
+            passe_html.disabled = true
+            escanteio_html.disabled = true
+            lateral_html.disabled = true
+            cabeçada_html.disabled = true
+            agarrar_html.disabled = true
+            clearInterval(automatic)
         } else {
-            gols += porcent
+            agarrar *= 2
+            chutes *= 16
         }
         simular_html.style.background = `linear-gradient(to top, rgba(255, 255, 255, 0.712) 100%, black)`
         timer_simular
@@ -168,9 +202,24 @@ function powerup(click) {
                 }
                 if (gradient3 <= 0) {
                     simular_html.style.background = 'linear-gradient(to top, black, black)'
+
                     gradient3 = 100
                     seg3 = 0
                     cont3 = 0
+                    chutes = guard_chute
+                    agarrar = guard_agarrar
+                    cabeçada = guard_cabeçada
+                    escanteio = guard_escanteio
+                    lateral = guard_lateral
+                    passe = guard_passe
+                    cps_agarrar = guard_cpsagarrar
+                    cps_cabeçada = guard_cpscabeçada
+                    cps_chute = guard_cpschute
+                    cps_escanteio = guard_cpsescanteio
+                    cps_lateral = guard_cpslateral
+                    cps_passe = guard_cpspasse
+                    automatic = setInterval(aut, 1000)
+                    automatic
                     simular_html.disabled = false
                     clearInterval(timer_simular)
                 }
