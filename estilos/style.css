@@ -30,7 +30,7 @@ div#contador {
 div#bola {
     margin: auto;
     margin-bottom: 50px;
-    background-image: url("../imagens/bola-de-futebol-1.png");
+    background-image: url("../imagens/sprite_bola3.png");
     background-repeat: no-repeat;
     background-size: contain;
     width: 40%;

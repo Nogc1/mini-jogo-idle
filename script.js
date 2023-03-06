@@ -37,7 +37,7 @@ var valor_caneleira = 100000
 var valor_meia = 1000000
 var valor_calção = 1200000
 
-// Quanto cada um gera  obs. Valor inicial
+// Quanto cada um gera obs. Valor inicial = 0
 var passe = 0
 var chutes = 0
 var escanteio = 0
@@ -69,6 +69,13 @@ lateral_html.disabled = true
 cabeçada_html.disabled = true
 agarrar_html.disabled = true
 
+// Inicia o contador
+function contagem() {
+    gols += gols_valor
+    contador.innerHTML = `<p>Gols: ${gols.toFixed(0)}</p>`
+}
+
+// Área de Powerups
 function powerup(click) {
     let seg1 = 0
     let gradient1 = 100
@@ -148,20 +155,20 @@ function powerup(click) {
     }
     if (click == 'simular') {
         var timer_simular = setInterval(min_simular, 1000)
+        var guard_chute = chutes
+        var guard_passe = passe
+        var guard_escanteio = escanteio
+        var guard_lateral = lateral
+        var guard_cabeçada = cabeçada
+        var guard_agarrar = agarrar
+        var guard_cpschute = cps_chute
+        var guard_cpspasse = cps_passe
+        var guard_cpsescanteio = cps_escanteio
+        var guard_cpslateral = cps_lateral
+        var guard_cpscabeçada = cps_cabeçada
+        var guard_cpsagarrar = cps_agarrar
 
         if (d100() < 40) {
-            var guard_chute = chutes
-            var guard_passe = passe
-            var guard_escanteio = escanteio
-            var guard_lateral = lateral
-            var guard_cabeçada = cabeçada
-            var guard_agarrar = agarrar
-            var guard_cpschute = cps_chute
-            var guard_cpspasse = cps_passe
-            var guard_cpsescanteio = cps_escanteio
-            var guard_cpslateral = cps_lateral
-            var guard_cpscabeçada = cps_cabeçada
-            var guard_cpsagarrar = cps_agarrar
 
             chutes = 0
             passe = 0
@@ -218,8 +225,8 @@ function powerup(click) {
                     cps_escanteio = guard_cpsescanteio
                     cps_lateral = guard_cpslateral
                     cps_passe = guard_cpspasse
-                    automatic = setInterval(aut, 1000)
-                    automatic
+                    var newautomatic = setInterval(aut, 1000)
+                    newautomatic
                     simular_html.disabled = false
                     clearInterval(timer_simular)
                 }
@@ -232,14 +239,7 @@ function powerup(click) {
     }
 }
 
-// Inicia o contador
-function contagem() {
-    gols += gols_valor
-    contador.innerHTML = `<p>Gols: ${gols.toFixed(0)}</p>`
-}
-
-// Área de upgrades
-// Verifica se o botão foi apertado e qual que foi apertado
+// Área de Upgrades
 function verif_upgrade(clicado) {
     if (clicado == 'chute') {
         gols -= valor_chute
@@ -427,7 +427,7 @@ function verif_upgrade(clicado) {
     contador.innerHTML =`<p>Gols: ${gols.toFixed(0)}</p>`
 }
 
-// Área de buffs
+// Área de Buffs
 function verif_buff(obtido) {
     if (obtido == 'chuteira') {
         cps_chute += 2.5
@@ -457,6 +457,7 @@ function verif_buff(obtido) {
     }
 }
 
+// Função que gera as coisas automático
 function aut() {
     // Verifica se o upgrade pode ser comprado
     if (gols >= valor_chute) {
