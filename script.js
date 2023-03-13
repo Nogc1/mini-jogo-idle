@@ -122,7 +122,7 @@ function powerup(click) {
             }
         }
     }
-    if (click == 'drible') {
+    else if (click == 'drible') {
         var timer_drible = setInterval(min_drible, 1000)
 
         var up = cps_chute
@@ -153,7 +153,7 @@ function powerup(click) {
             }
         }
     }
-    if (click == 'simular') {
+    else if (click == 'simular') {
         var timer_simular = setInterval(min_simular, 1000)
         var guard_chute = chutes
         var guard_passe = passe
@@ -167,8 +167,9 @@ function powerup(click) {
         var guard_cpslateral = cps_lateral
         var guard_cpscabeçada = cps_cabeçada
         var guard_cpsagarrar = cps_agarrar
+        var guard_gols = gols_valor
 
-        if (d100() < 40) {
+        if (d100() < 20) {
 
             chutes = 0
             passe = 0
@@ -182,6 +183,7 @@ function powerup(click) {
             cps_lateral = 0
             cps_cabeçada = 0
             cps_agarrar = 0
+            gols_valor = 1
 
             chute_html.disabled = true
             passe_html.disabled = true
@@ -190,7 +192,9 @@ function powerup(click) {
             cabeçada_html.disabled = true
             agarrar_html.disabled = true
             clearInterval(automatic)
-        } else {
+            
+        } 
+        else if (d100() > 20) {
             agarrar *= 2
             chutes *= 16
         }
@@ -225,8 +229,8 @@ function powerup(click) {
                     cps_escanteio = guard_cpsescanteio
                     cps_lateral = guard_cpslateral
                     cps_passe = guard_cpspasse
-                    var newautomatic = setInterval(aut, 1000)
-                    newautomatic
+                    gols_valor = guard_gols
+                    automatic
                     simular_html.disabled = false
                     clearInterval(timer_simular)
                 }
@@ -549,6 +553,7 @@ function aut() {
     gols += escanteio
     gols += lateral
     gols += cabeçada
+    gols += agarrar
 
     // Muda a cor caso o upgrade esteja habilitado ou desabilitado 
     if (chute_html.disabled == true) {
@@ -586,5 +591,6 @@ function aut() {
     escanteio_html.value = `Escanteio ${valor_escanteio.toFixed(0)}`
     lateral_html.value = `Lateral ${valor_lateral.toFixed(0)}`
     cabeçada_html.value = `Cabeçada ${valor_cabeçada.toFixed(0)}`
+    agarrar_html.value = `Agarrar ${valor_agarrar.toFixed(0)}`
     contador.innerHTML =`<p>Gols: ${gols.toFixed(0)}</p>`
 }
