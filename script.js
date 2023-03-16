@@ -142,7 +142,8 @@ function powerup(click) {
                     cont2 = 0
                 }
                 if (gradient2 <= 0) {
-                    drible_html.style.background = 'linear-gradient(to top, black, black)'
+                    drible_html.style.backgroundImage = 'url(imagens/drible.png)'
+                    drible_html.style.backgroundSize = 'cover'
                     gradient2 = 100
                     seg2 = 0
                     cont2 = 0
