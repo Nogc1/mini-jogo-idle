@@ -88,6 +88,14 @@ input#drible {
     background-image: url('../imagens/drible.png');
     background-size: cover;
 }
+input#simular {
+    background-image: url('../imagens/simular.png');
+    background-size: cover;
+}
+input#carrinho {
+    background-image: url('../imagens/carrinho.png');
+    background-size: cover;
+}
 
 input.powerup:hover {
     transform: translate(-2px, -2px);

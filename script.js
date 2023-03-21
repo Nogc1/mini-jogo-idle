@@ -112,7 +112,8 @@ function powerup(click) {
                     cont1 = 0
                 }
                 if (gradient1 <= 0) {
-                    carrinho_html.style.background = `linear-gradient(to top, black, black)`
+                    carrinho_html.style.backgroundImage = 'url(imagens/carrinho.png)'
+                    carrinho_html.style.backgroundSize = 'cover'
                     gradient1 = 100
                     seg1 = 0
                     cont1 = 0
@@ -213,7 +214,8 @@ function powerup(click) {
                     cont3 = 0
                 }
                 if (gradient3 <= 0) {
-                    simular_html.style.background = 'linear-gradient(to top, black, black)'
+                    simular_html.style.backgroundImage = 'url(imagens/simular.png)'
+                    simular_html.style.backgroundSize = 'cover'
 
                     gradient3 = 100
                     seg3 = 0
