@@ -1,6 +1,5 @@
 @charset "UTF-8";
 
-
 /* PALETA DE CORES
 
     Marrons: rgb(54, 21, 21) 
@@ -50,13 +49,17 @@ div#bola:hover {
 }
 
 section.upgrades {
-    background-color: rgb(37, 19, 5);
+    background-image: url('../imagens/madeira.png');
+    background-size: contain;
+    background-color: #251305;
     position: fixed;
     bottom: 0;
 }
 
 section.buffs {
-    background-color: rgb(37, 19, 5);
+    background-image: url('../imagens/madeira.png');
+    background-size: contain;
+    background-color: #251305;
     width: 216px;
     max-height: 111px;
     margin-left: 20px;

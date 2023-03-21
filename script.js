@@ -170,9 +170,11 @@ function powerup(click) {
         var guard_cpscabeçada = cps_cabeçada
         var guard_cpsagarrar = cps_agarrar
         var guard_gols = gols_valor
+        var verificar = false
 
-        if (d100() < 20) {
+        if (d100() < 25) {
 
+            verificar = true
             chutes = 0
             passe = 0
             escanteio = 0
@@ -195,12 +197,12 @@ function powerup(click) {
             agarrar_html.disabled = true
             clearInterval(automatic)
             
-        } 
-        else if (d100() > 20) {
+        } else {
             agarrar *= 2
             chutes *= 16
         }
-        simular_html.style.background = `linear-gradient(to top, rgba(255, 255, 255, 0.712) 100%, black)`
+
+        simular_html.style.background = 'linear-gradient(to top, rgba(255, 255, 255, 0.712) 100%, black)'
         timer_simular
         simular_html.disabled = true
 
@@ -220,20 +222,25 @@ function powerup(click) {
                     gradient3 = 100
                     seg3 = 0
                     cont3 = 0
-                    chutes = guard_chute
-                    agarrar = guard_agarrar
-                    cabeçada = guard_cabeçada
-                    escanteio = guard_escanteio
-                    lateral = guard_lateral
-                    passe = guard_passe
-                    cps_agarrar = guard_cpsagarrar
-                    cps_cabeçada = guard_cpscabeçada
-                    cps_chute = guard_cpschute
-                    cps_escanteio = guard_cpsescanteio
-                    cps_lateral = guard_cpslateral
-                    cps_passe = guard_cpspasse
-                    gols_valor = guard_gols
-                    automatic
+
+                    if (verificar == true) {
+                        chutes = guard_chute
+                        agarrar = guard_agarrar
+                        cabeçada = guard_cabeçada
+                        escanteio = guard_escanteio
+                        lateral = guard_lateral
+                        passe = guard_passe
+                        cps_agarrar = guard_cpsagarrar
+                        cps_cabeçada = guard_cpscabeçada
+                        cps_chute = guard_cpschute
+                        cps_escanteio = guard_cpsescanteio
+                        cps_lateral = guard_cpslateral
+                        cps_passe = guard_cpspasse
+                        gols_valor = guard_gols
+                        automatic = setInterval(aut, 1000)
+                        automatic
+                    }
+            
                     simular_html.disabled = false
                     clearInterval(timer_simular)
                 }
