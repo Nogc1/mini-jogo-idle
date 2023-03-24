@@ -56,7 +56,7 @@ section.upgrades {
     bottom: 0;
 }
 
-section.buffs {
+section#buff {
     background-image: url('../imagens/madeira.png');
     background-size: contain;
     background-color: #251305;
@@ -109,7 +109,9 @@ input.powerup:hover {
 input.buffs {
     width: 30px;
     height: 30px;
-    background-color: rgb(54, 21, 21);
+    background-image: url('../imagens/tabua1.png');
+    background-size: contain;
+    background-color: #361515;
     margin: 5px;
     border-color: rgb(68, 29, 29);
 }
@@ -117,12 +119,15 @@ input.buffs:hover {
     background-color: rgb(58, 28, 28);
 }
 input.buffs:disabled {
+    background-image: url('../imagens/tabua2.png');
     background-color: rgba(75, 50, 50, 0.548);
     border-color: rgba(48, 30, 30, 0.61);
 }
 
 input.upgrades {
     text-align: left;
+    background-image: url('../imagens/tabua1.png');
+    background-size: contain;
     color: rgb(151, 19, 19);
     width: 150px;
     height: 40px;
@@ -137,7 +142,8 @@ input.upgrades:hover {
 }
 
 input.upgrades:disabled {
-    background-color: rgba(75, 50, 50, 0.548);
+    background-image: url('../imagens/tabua2.png');
+    background-color: #4b3232;
     border-color: rgba(48, 30, 30, 0.61);
     color: rgba(151, 19, 19, 0.747);
 }
