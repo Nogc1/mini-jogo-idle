@@ -259,20 +259,20 @@ function verif_upgrade(clicado) {
         gols -= valor_chute
         if (gols < valor_chute) {
             chute_html.disabled = true
-            chute_html.style.color = 'rgb(151, 19, 19)'
+            chute_html.style.color = 'rgba(255, 0, 0, 0.767)'
         }
     
         if (gols < valor_passe) {
             passe_html.disabled = true
-            passe_html.style.color = 'rgb(151, 19, 19)'
+            passe_html.style.color = 'rgba(255, 0, 0, 0.767)'
         }
         if (gols < valor_escanteio) {
             escanteio_html.disabled = true
-            escanteio_html.style.color = 'rgb(151, 19, 19)'
+            escanteio_html.style.color = 'rgba(255, 0, 0, 0.767)'
         }
         if (gols < valor_lateral) {
             lateral_html.disabled = true
-            lateral_html.style.color = 'rgb(151, 19, 19)'
+            lateral_html.style.color = 'rgba(255, 0, 0, 0.767)'
         }
     
         valor_chute *= 1.2
@@ -287,23 +287,23 @@ function verif_upgrade(clicado) {
         gols -= valor_escanteio
         if (gols < valor_chute) {
             chute_html.disabled = true
-            chute_html.style.color = 'rgb(151, 19, 19)'
+            chute_html.style.color = 'rgba(255, 0, 0, 0.767)'
         }
         if (gols < valor_passe) {
             passe_html.disabled = true
-            passe_html.style.color = 'rgb(151, 19, 19)'
+            passe_html.style.color = 'rgba(255, 0, 0, 0.767)'
         }
         if (gols < valor_escanteio) {
             escanteio_html.disabled = true
-            escanteio_html.style.color = 'rgb(151, 19, 19)'
+            escanteio_html.style.color = 'rgba(255, 0, 0, 0.767)'
         }
         if (gols < valor_lateral) {
             lateral_html.disabled = true
-            lateral_html.style.color = 'rgb(151, 19, 19)'
+            lateral_html.style.color = 'rgba(255, 0, 0, 0.767)'
         }
         if (gols < valor_cabeçada) {
             cabeçada_html.disabled = true
-            cabeçada_html.style.color = 'rgb(151, 19, 19)'
+            cabeçada_html.style.color = 'rgba(255, 0, 0, 0.767)'
         }
 
         valor_escanteio *= 1.2
@@ -317,24 +317,24 @@ function verif_upgrade(clicado) {
         gols -= valor_passe
         if (gols < valor_passe) {
             passe_html.disabled = true
-            passe_html.style.color = 'rgb(151, 19, 19)'
+            passe_html.style.color = 'rgba(255, 0, 0, 0.767)'
         }
 
         if (gols < valor_chute) {
             chute_html.disabled = true
-            chute_html.style.color = 'rgb(151, 19, 19)'
+            chute_html.style.color = 'rgba(255, 0, 0, 0.767)'
         }
         if (gols < valor_escanteio) {
             escanteio_html.disabled = true
-            escanteio_html.style.color = 'rgb(151, 19, 19)'
+            escanteio_html.style.color = 'rgba(255, 0, 0, 0.767)'
         }
         if (gols < valor_lateral) {
             lateral_html.disabled = true
-            lateral_html.style.color = 'rgb(151, 19, 19)'
+            lateral_html.style.color = 'rgba(255, 0, 0, 0.767)'
         }
         if (gols < valor_cabeçada) {
             cabeçada_html.disabled = true
-            cabeçada_html.style.color = 'rgb(151, 19, 19)'
+            cabeçada_html.style.color = 'rgba(255, 0, 0, 0.767)'
         }
 
         passe += cps_passe
@@ -348,23 +348,23 @@ function verif_upgrade(clicado) {
         gols -= valor_lateral
         if (gols < valor_chute) {
             chute_html.disabled = true
-            chute_html.style.color = 'rgb(151, 19, 19)'
+            chute_html.style.color = 'rgba(255, 0, 0, 0.767)'
         }
         if (gols < valor_passe) {
             passe_html.disabled = true
-            passe_html.style.color = 'rgb(151, 19, 19)'
+            passe_html.style.color = 'rgba(255, 0, 0, 0.767)'
         }
         if (gols < valor_escanteio) {
             escanteio_html.disabled = true
-            escanteio_html.style.color = 'rgb(151, 19, 19)'
+            escanteio_html.style.color = 'rgba(255, 0, 0, 0.767)'
         }
         if (gols < valor_lateral) {
             lateral_html.disabled = true
-            lateral_html.style.color = 'rgb(151, 19, 19)'
+            lateral_html.style.color = 'rgba(255, 0, 0, 0.767)'
         }
         if (gols < valor_cabeçada) {
             cabeçada_html.disabled = true
-            cabeçada_html.style.color = 'rgb(151, 19, 19)'
+            cabeçada_html.style.color = 'rgba(255, 0, 0, 0.767)'
         }
 
         valor_lateral *= 1.2
@@ -378,23 +378,23 @@ function verif_upgrade(clicado) {
         gols -= valor_cabeçada
         if (gols < valor_chute) {
             chute_html.disabled = true
-            chute_html.style.color = 'rgb(151, 19, 19)'
+            chute_html.style.color = 'rgba(255, 0, 0, 0.767)'
         }
         if (gols < valor_passe) {
             passe_html.disabled = true
-            passe_html.style.color = 'rgb(151, 19, 19)'
+            passe_html.style.color = 'rgba(255, 0, 0, 0.767)'
         }
         if (gols < valor_escanteio) {
             escanteio_html.disabled = true
-            escanteio_html.style.color = 'rgb(151, 19, 19)'
+            escanteio_html.style.color = 'rgba(255, 0, 0, 0.767)'
         }
         if (gols < valor_lateral) {
             lateral_html.disabled = true
-            lateral_html.style.color = 'rgb(151, 19, 19)'
+            lateral_html.style.color = 'rgba(255, 0, 0, 0.767)'
         }
         if (gols < valor_cabeçada) {
             cabeçada_html.disabled = true
-            cabeçada_html.style.color = 'rgb(151, 19, 19)'
+            cabeçada_html.style.color = 'rgba(255, 0, 0, 0.767)'
         }
 
         valor_cabeçada *= 1.2
@@ -408,27 +408,27 @@ function verif_upgrade(clicado) {
         gols -= valor_agarrar
         if (gols < valor_chute) {
             chute_html.disabled = true
-            chute_html.style.color = 'rgb(151, 19, 19)'
+            chute_html.style.color = 'rgba(255, 0, 0, 0.767)'
         }
         if (gols < valor_passe) {
             passe_html.disabled = true
-            passe_html.style.color = 'rgb(151, 19, 19)'
+            passe_html.style.color = 'rgba(255, 0, 0, 0.767)'
         }
         if (gols < valor_escanteio) {
             escanteio_html.disabled = true
-            escanteio_html.style.color = 'rgb(151, 19, 19)'
+            escanteio_html.style.color = 'rgba(255, 0, 0, 0.767)'
         }
         if (gols < valor_lateral) {
             lateral_html.disabled = true
-            lateral_html.style.color = 'rgb(151, 19, 19)'
+            lateral_html.style.color = 'rgba(255, 0, 0, 0.767)'
         }
         if (gols < valor_cabeçada) {
             cabeçada_html.disabled = true
-            cabeçada_html.style.color = 'rgb(151, 19, 19)'
+            cabeçada_html.style.color = 'rgba(255, 0, 0, 0.767)'
         }
         if (gols < valor_agarrar) {
             agarrar_html.disabled = true
-            agarrar_html.style.color = 'rgb(151, 19, 19)'
+            agarrar_html.style.color = 'rgba(255, 0, 0, 0.767)'
         }
 
         valor_agarrar *= 1.5
@@ -503,29 +503,29 @@ function aut() {
 
     if (gols < valor_chute) {
         chute_html.disabled = true
-        chute_html.style.color = 'rgb(151, 19, 19)'
+        chute_html.style.color = 'rgba(255, 0, 0, 0.767)'
     }
     
     if (gols < valor_passe) {
         passe_html.disabled = true
-        passe_html.style.color = 'rgb(151, 19, 19)'
+        passe_html.style.color = 'rgba(255, 0, 0, 0.767)'
     }
 
     if (gols < valor_escanteio) {
         escanteio_html.disabled = true
-        escanteio_html.style.color = 'rgb(151, 19, 19)'
+        escanteio_html.style.color = 'rgba(255, 0, 0, 0.767)'
     }
     if (gols < valor_lateral) {
         lateral_html.disabled = true
-        lateral_html.style.color = 'rgb(151, 19, 19)'
+        lateral_html.style.color = 'rgba(255, 0, 0, 0.767)'
     }
     if (gols < valor_cabeçada) {
         cabeçada_html.disabled = true
-        cabeçada_html.style.color = 'rgb(151, 19, 19)'
+        cabeçada_html.style.color = 'rgba(255, 0, 0, 0.767)'
     }
     if (gols < valor_agarrar) {
         agarrar_html.disabled = true
-        agarrar_html.style.color = 'rgb(151, 19, 19)'
+        agarrar_html.style.color = 'rgba(255, 0, 0, 0.767)'
     }
 
     // Verifica se o buff pode ser comprado
@@ -567,31 +567,31 @@ function aut() {
 
     // Muda a cor caso o upgrade esteja habilitado ou desabilitado 
     if (chute_html.disabled == true) {
-        chute_html.style.color = 'rgb(151, 19, 19)'
+        chute_html.style.color = 'rgba(255, 0, 0, 0.767)'
     } else {
         chute_html.style.color = 'rgb(54, 158, 54)'
     }
 
     if (passe_html.disabled == true) {
-        passe_html.style.color = 'rgb(151, 19, 19)'
+        passe_html.style.color = 'rgba(255, 0, 0, 0.767)'
     } else {
         passe_html.style.color = 'rgb(54, 158, 54)'
     }
 
     if (escanteio_html.disabled == true) {
-        escanteio_html.style.color = 'rgb(151, 19, 19)'
+        escanteio_html.style.color = 'rgba(255, 0, 0, 0.767)'
     } else {
         escanteio_html.style.color = 'rgb(54, 158, 54)'
     }
 
     if (lateral_html.disabled == true) {
-        lateral_html.style.color = 'rgb(151, 19, 19)'
+        lateral_html.style.color = 'rgba(255, 0, 0, 0.767)'
     } else {
         lateral_html.style.color = 'rgb(54, 158, 54)'
     }
 
     if (cabeçada_html.disabled == true) {
-        cabeçada_html.style.color = 'rgb(151, 19, 19)'
+        cabeçada_html.style.color = 'rgba(255, 0, 0, 0.767)'
     } else {
         cabeçada_html.style.color = 'rgb(54, 158, 54)'
     }
