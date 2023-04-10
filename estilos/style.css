@@ -55,6 +55,8 @@ section.upgrades {
     background-color: #251305;
     position: fixed;
     bottom: 0;
+    max-height: 360px;
+    align-items: center;
 }
 
 section#buff {
@@ -130,13 +132,22 @@ input.upgrades {
     background-image: url('../imagens/tabua1.png');
     background-size: contain;
     color: rgb(255, 0, 0);
-    width: 170px;
+    min-width: 160px;
     height: 50px;
     background-color: rgb(54, 21, 21);
     padding: 5px;
-    margin: 10px 8px 10px 0px;
+    margin: 10px 0px 10px 0px;
     border-color: rgb(68, 29, 29);
     font-size: 18px;
+}
+
+#passe, #escanteio, #cabeçada {
+    margin-left: 8px;
+}
+
+input#chute, #lateral, #agarrar {
+    margin-left: 5px;
+    margin-right: -10px;
 }
 
 input.upgrades:hover {
