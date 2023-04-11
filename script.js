@@ -56,12 +56,13 @@ var cps_agarrar = 1000
 // Contador
 var gols = 0
 var gols_valor = 1
+var cps = 0
 
 // Atualiza o contador e as variaveis para o novo valor através da função aut
 var automatic = setInterval(aut, 1000)
 automatic
 
-contador.innerHTML = `<p>Gols: ${gols.toFixed(0)}</p>`
+contador.innerHTML = `<p>Gols: ${gols.toFixed(0)}</p><p id='cps'>Gols por segundo: ${cps.toFixed(2)}</p>`
 chute_html.disabled = true
 passe_html.disabled = true
 escanteio_html.disabled = true
@@ -72,7 +73,7 @@ agarrar_html.disabled = true
 // Inicia o contador
 function contagem() {
     gols += gols_valor
-    contador.innerHTML = `<p>Gols: ${gols.toFixed(0)}</p>`
+    contador.innerHTML = `<p>Gols: ${gols.toFixed(0)}</p><p id='cps'>Gols por segundo: ${cps.toFixed(2)}</p>`
 }
 
 // Área de Powerups
@@ -98,7 +99,7 @@ function powerup(click) {
         } else {
             gols += porcent
         }
-        carrinho_html.style.background = `linear-gradient(to top, rgba(255, 255, 255, 0.712) 100%, black)`
+        carrinho_html.style.background = `linear-gradient(to top, rgba(255, 255, 255, 0.39) 100%, black)`
         timer_carrinho
         carrinho_html.disabled = true
 
@@ -108,7 +109,7 @@ function powerup(click) {
                 cont1 += 1
                 if (cont1 == 15) {
                     gradient1 -= 34
-                    carrinho_html.style.background = `linear-gradient(to top, rgba(255, 255, 255, 0.712) ${gradient1}%, black 0%)`
+                    carrinho_html.style.background = `linear-gradient(to top, rgba(255, 255, 255, 0.39) ${gradient1}%, rgba(0, 0, 0, 0) 0%)`
                     cont1 = 0
                 }
                 if (gradient1 <= 0) {
@@ -129,7 +130,7 @@ function powerup(click) {
         var up = cps_chute
         cps_chute *= 2
 
-        drible_html.style.background = `linear-gradient(to top, rgba(255, 255, 255, 0.712) 100%, black)`
+        drible_html.style.background = `linear-gradient(to top, rgba(255, 255, 255, 0.39) 100%, black)`
         timer_drible
         drible_html.disabled = true
 
@@ -139,7 +140,7 @@ function powerup(click) {
                 cont2 += 1
                 if (cont2 == 15) {
                     gradient2 -= 25
-                    drible_html.style.background = `linear-gradient(to top, rgba(255, 255, 255, 0.712) ${gradient2}%, black 0%)`
+                    drible_html.style.background = `linear-gradient(to top, rgba(255, 255, 255, 0.39) ${gradient2}%, rgba(0, 0, 0, 0) 0%)`
                     cont2 = 0
                 }
                 if (gradient2 <= 0) {
@@ -202,7 +203,7 @@ function powerup(click) {
             chutes *= 16
         }
 
-        simular_html.style.background = 'linear-gradient(to top, rgba(255, 255, 255, 0.712) 100%, black)'
+        simular_html.style.background = 'linear-gradient(to top, rgba(255, 255, 255, 0.39) 100%, black)'
         timer_simular
         simular_html.disabled = true
 
@@ -212,7 +213,7 @@ function powerup(click) {
                 cont3 += 1
                 if (cont3 == 1) {
                     gradient3 -= 1
-                    simular_html.style.background = `linear-gradient(to top, rgba(255, 255, 255, 0.712) ${gradient3}%, black 0%)`
+                    simular_html.style.background = `linear-gradient(to top, rgba(255, 255, 255, 0.39) ${gradient3}%, rgba(0, 0, 0, 0) 0%)`
                     cont3 = 0
                 }
                 if (gradient3 <= 0) {
@@ -438,7 +439,7 @@ function verif_upgrade(clicado) {
             gols = 0
         }
     }
-    contador.innerHTML =`<p>Gols: ${gols.toFixed(0)}</p>`
+    contador.innerHTML =`<p>Gols: ${gols.toFixed(0)}</p><p id='cps'>Gols por segundo: ${cps.toFixed(2)}</p>`
 }
 
 // Área de Buffs
@@ -564,6 +565,7 @@ function aut() {
     gols += lateral
     gols += cabeçada
     gols += agarrar
+    cps = passe + escanteio + lateral + cabeçada + agarrar
 
     // Muda a cor caso o upgrade esteja habilitado ou desabilitado 
     if (chute_html.disabled == true) {
@@ -602,5 +604,5 @@ function aut() {
     lateral_html.value = `Lateral ${valor_lateral.toFixed(0)}`
     cabeçada_html.value = `Cabeçada ${valor_cabeçada.toFixed(0)}`
     agarrar_html.value = `Agarrar ${valor_agarrar.toFixed(0)}`
-    contador.innerHTML =`<p>Gols: ${gols.toFixed(0)}</p>`
+    contador.innerHTML =`<p>Gols: ${gols.toFixed(0)}</p><p id='cps'>Gols por segundo: ${cps.toFixed(2)}</p>`
 }

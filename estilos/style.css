@@ -23,17 +23,22 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-color: rgb(54, 158, 54);
-    background-position: center;
+    background-position: top;
 }
 div#contador {
-    font-size: 30px;
+    font-size: 26px;
     text-align: center;
     margin: auto;
     padding-top: 20px;
     margin-bottom: 20px;
     display: block;
-    width: 80px;
+    height: 50px;
 }
+
+#cps {
+    font-size: 16px;
+}
+
 div#bola {
     margin: auto;
     margin-bottom: 50px;
@@ -41,7 +46,7 @@ div#bola {
     background-repeat: no-repeat;
     background-size: contain;
     width: 40%;
-    height: 40%;
+    height: 150px;
 }
 div#bola:hover {
     width: 49%;
@@ -68,7 +73,8 @@ section#buff {
     margin-left: 20px;
     display: none;
     position: fixed;
-    bottom: 157px;
+    bottom: 179px;
+    color: rgb(255, 255, 255);
 }
 
 section#powerup {
@@ -78,29 +84,53 @@ section#powerup {
     top: 50px;
     margin: 0px;
     width: 60px;
-    height: 180px;
+    height: 200px;
 }
 
 input.powerup {
+    position: absolute;
     margin: 3px;
     border: 1px;
-    background: linear-gradient(to top, black, black);
+    background: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
     border-radius: 50px;
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
 } 
 
-input#drible {
+div.img {
+    position: absolute;
+    margin: 3px;
+    border: 1px;
+    border-radius: 50px;
+    width: 60px;
+    height: 60px;
+}
+
+div#dri {
     background-image: url('../imagens/drible.png');
     background-size: cover;
+    bottom: 0px;
 }
-input#simular {
+#drible {
+    bottom: 0px;
+}
+
+div#sim {
     background-image: url('../imagens/simular.png');
     background-size: cover;
+    bottom: 69px;
 }
-input#carrinho {
+#simular {
+    bottom: 69px;
+}
+
+div#car {
     background-image: url('../imagens/carrinho.png');
     background-size: cover;
+    top: 0px;
+}
+#carrinho {
+    top: 0px;
 }
 
 input.powerup:hover {
@@ -135,8 +165,9 @@ input.upgrades {
     min-width: 160px;
     height: 50px;
     background-color: rgb(54, 21, 21);
+    display: inline;
     padding: 5px;
-    margin: 10px 0px 10px 0px;
+    margin: 5px auto 5px auto;
     border-color: rgb(68, 29, 29);
     font-size: 18px;
 }
@@ -145,7 +176,7 @@ input.upgrades {
     margin-left: 8px;
 }
 
-input#chute, #lateral, #agarrar {
+#chute, #lateral, #agarrar {
     margin-left: 5px;
     margin-right: -10px;
 }
