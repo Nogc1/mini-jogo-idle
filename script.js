@@ -99,17 +99,17 @@ function powerup(click) {
         } else {
             gols += porcent
         }
-        carrinho_html.style.background = `linear-gradient(to top, rgba(255, 255, 255, 0.39) 100%, black)`
+        carrinho_html.style.background = `linear-gradient(to top, rgba(255, 255, 255, 0.59) 100%, black)`
         timer_carrinho
         carrinho_html.disabled = true
 
         function min_carrinho() {
             if (seg1 < 45) {
                 seg1 += 1
-                cont1 += 1
+                cont1 += 3
                 if (cont1 == 15) {
-                    gradient1 -= 34
-                    carrinho_html.style.background = `linear-gradient(to top, rgba(255, 255, 255, 0.39) ${gradient1}%, rgba(0, 0, 0, 0) 0%)`
+                    gradient1 -= 3
+                    carrinho_html.style.background = `linear-gradient(to top, rgba(255, 255, 255, 0.59) ${gradient1}%, rgba(0, 0, 0, 0) 0%)`
                     cont1 = 0
                 }
                 if (gradient1 <= 0) {
@@ -130,7 +130,7 @@ function powerup(click) {
         var up = cps_chute
         cps_chute *= 2
 
-        drible_html.style.background = `linear-gradient(to top, rgba(255, 255, 255, 0.39) 100%, black)`
+        drible_html.style.background = `linear-gradient(to top, rgba(255, 255, 255, 0.59) 100%, black)`
         timer_drible
         drible_html.disabled = true
 
@@ -140,7 +140,7 @@ function powerup(click) {
                 cont2 += 1
                 if (cont2 == 15) {
                     gradient2 -= 25
-                    drible_html.style.background = `linear-gradient(to top, rgba(255, 255, 255, 0.39) ${gradient2}%, rgba(0, 0, 0, 0) 0%)`
+                    drible_html.style.background = `linear-gradient(to top, rgba(255, 255, 255, 0.59) ${gradient2}%, rgba(0, 0, 0, 0) 0%)`
                     cont2 = 0
                 }
                 if (gradient2 <= 0) {
@@ -203,7 +203,7 @@ function powerup(click) {
             chutes *= 16
         }
 
-        simular_html.style.background = 'linear-gradient(to top, rgba(255, 255, 255, 0.39) 100%, black)'
+        simular_html.style.background = 'linear-gradient(to top, rgba(255, 255, 255, 0.59) 100%, black)'
         timer_simular
         simular_html.disabled = true
 
@@ -213,7 +213,7 @@ function powerup(click) {
                 cont3 += 1
                 if (cont3 == 1) {
                     gradient3 -= 1
-                    simular_html.style.background = `linear-gradient(to top, rgba(255, 255, 255, 0.39) ${gradient3}%, rgba(0, 0, 0, 0) 0%)`
+                    simular_html.style.background = `linear-gradient(to top, rgba(255, 255, 255, 0.59) ${gradient3}%, rgba(0, 0, 0, 0) 0%)`
                     cont3 = 0
                 }
                 if (gradient3 <= 0) {
