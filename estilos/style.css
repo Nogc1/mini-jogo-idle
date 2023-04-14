@@ -38,15 +38,13 @@ div#contador {
 #cps {
     font-size: 16px;
 }
-
 div#bola {
     margin: auto;
-    margin-bottom: 50px;
     background-image: url("../imagens/sprite_bola3.png");
     background-repeat: no-repeat;
     background-size: contain;
     width: 40%;
-    height: 150px;
+    height: 145px;
     animation-name: bola2;
     animation-duration: 0.8s;
     animation-fill-mode: forwards;
@@ -55,27 +53,28 @@ div#bola:hover {
     animation-name: bola;
     animation-duration: 0.8s;
     animation-fill-mode: forwards;
+
 }
 
 @keyframes bola {
     from {
         width: 40%;
-        height: 150px;
+        height: 145px;
     }
     to {
         width: 49%;
-        height: 29%;
+        height: 27%;
     }
 }
 
 @keyframes bola2 {
     from {
         width: 49%;
-        height: 29%;
+        height: 27%;
     }
     to {
         width: 40%;
-        height: 150px;
+        height: 145px;
     }
 }
 
@@ -96,6 +95,7 @@ section#buff {
     width: 216px;
     max-height: 111px;
     margin-left: 20px;
+    text-align: center;
     display: none;
     position: fixed;
     bottom: 179px;
@@ -205,8 +205,15 @@ input.upgrades {
     margin-left: 8px;
 }
 
-input.upgrades:hover {
-    background-color: rgb(58, 28, 28);
+.upgrades div {
+    display: none;
+}
+
+#infopass {
+    position: absolute;
+    top: -30px;
+    left: 30px;
+    background-color: rgba(20, 20, 20, 0.575);
 }
 
 input.upgrades:disabled {
