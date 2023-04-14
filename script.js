@@ -22,6 +22,9 @@ let caneleira_html = document.getElementById('caneleira')
 let meia_html = document.getElementById('meia')
 let calção_html = document.getElementById('calção')
 
+// Informações dos upgrades
+let infopass = document.getElementById('infopass')
+
 // Preço dos upgrades
 var valor_chute = 30
 var valor_passe = 10
@@ -70,6 +73,14 @@ lateral_html.disabled = true
 cabeçada_html.disabled = true
 agarrar_html.disabled = true
 
+passe_html.addEventListener('pointerover', function() {
+    infopass.style.display = 'block'
+})
+
+passe_html.addEventListener('pointerout', function() {
+    infopass.style.display = 'none'
+})
+
 // Inicia o contador
 function contagem() {
     gols += gols_valor
@@ -106,8 +117,8 @@ function powerup(click) {
         function min_carrinho() {
             if (seg1 < 45) {
                 seg1 += 1
-                cont1 += 3
-                if (cont1 == 15) {
+                cont1 += 1
+                if (cont1 == 1) {
                     gradient1 -= 3
                     carrinho_html.style.background = `linear-gradient(to top, rgba(255, 255, 255, 0.59) ${gradient1}%, rgba(0, 0, 0, 0) 0%)`
                     cont1 = 0
@@ -138,8 +149,8 @@ function powerup(click) {
             if (seg2 < 60) {
                 seg2 += 1
                 cont2 += 1
-                if (cont2 == 15) {
-                    gradient2 -= 25
+                if (cont2 == 1) {
+                    gradient2 -= 2
                     drible_html.style.background = `linear-gradient(to top, rgba(255, 255, 255, 0.59) ${gradient2}%, rgba(0, 0, 0, 0) 0%)`
                     cont2 = 0
                 }
