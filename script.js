@@ -73,8 +73,14 @@ lateral_html.disabled = true
 cabeçada_html.disabled = true
 agarrar_html.disabled = true
 
+// Mostra as informações na tela quando o botão estiver sendo pressionado
+
 passe_html.addEventListener('pointerover', function() {
     infopass.style.display = 'block'
+    infopass.innerHTML = `
+    <h3>Passe</h3>
+    <p>A cada passe são gerados <strong>${cps_passe}</strong> gols por segundo.</p>
+    `  
 })
 
 passe_html.addEventListener('pointerout', function() {
