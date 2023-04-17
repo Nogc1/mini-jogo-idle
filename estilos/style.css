@@ -210,10 +210,22 @@ input.upgrades {
     background-color: rgba(12, 12, 12, 0.815);
     border-radius: 5px;
     max-width: 200px;
-    height: 73px;
+    height: 80px;
 }
 
-.upgrades h3, p {
+@keyframes infos {
+    from {
+        width: 0%;
+        height: 0%;
+    }
+    to {
+        width: 200px;
+        height: 80px;
+    }
+}
+
+#h3, #p {
+    display: none;
     margin: 5px;
 }
 
@@ -223,7 +235,7 @@ input.upgrades {
 
 #infopass {
     position: absolute;
-    top: -80px;
+    top: -100px;
     left: 30px;
 }
 

@@ -23,7 +23,8 @@ let meia_html = document.getElementById('meia')
 let calção_html = document.getElementById('calção')
 
 // Informações dos upgrades
-let infopass = document.getElementById('infopass')
+var infs = document.getElementsByClassName('inf')
+var infopass = document.getElementById('infopass')
 
 // Preço dos upgrades
 var valor_chute = 30
@@ -74,17 +75,41 @@ cabeçada_html.disabled = true
 agarrar_html.disabled = true
 
 // Mostra as informações na tela quando o botão estiver sendo pressionado
-
+var h3 = document.getElementById('h3')
+var p = document.getElementById('p')
 passe_html.addEventListener('pointerover', function() {
+    var timer = setInterval(delay, 1000)
+    timer
+    var c = 0
+    infopass.style.animationName = 'infos'
+    infopass.style.animationDuration = '0.5s'
+    infopass.style.animationFillMode = 'forwards'
+    infopass.style.animationDelay = '2'
     infopass.style.display = 'block'
-    infopass.innerHTML = `
-    <h3>Passe</h3>
-    <p>A cada passe são gerados <strong>${cps_passe}</strong> gols por segundo.</p>
-    `  
+    
+    function delay(con=0) {
+        con += 1
+        c += con
+        if (c == 1) {
+            h3.style.display = 'block'
+            p.style.display = 'block'
+            h3.innerHTML = 'Passe'
+            p.innerHTML = `A cada passe são gerados <strong>${cps_passe}</strong> gols por segundo.`
+            c = 0
+            con = 0
+            clearInterval(delay)
+        }
+    }
 })
+
 
 passe_html.addEventListener('pointerout', function() {
     infopass.style.display = 'none'
+    p.innerText = '0'
+    h3.innerText = '0'
+    p.style.display = 'none'
+    h3.style.display = 'none'
+    
 })
 
 // Inicia o contador
