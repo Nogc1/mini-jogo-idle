@@ -23,8 +23,8 @@ let meia_html = document.getElementById('meia')
 let calção_html = document.getElementById('calção')
 
 // Informações dos upgrades
-var infs = document.getElementsByClassName('inf')
 var infopass = document.getElementById('infopass')
+var infochut = document.getElementById('infochut')
 
 // Preço dos upgrades
 var valor_chute = 30
@@ -75,42 +75,72 @@ cabeçada_html.disabled = true
 agarrar_html.disabled = true
 
 // Mostra as informações na tela quando o botão estiver sendo pressionado
-var h3 = document.getElementById('h3')
-var p = document.getElementById('p')
-passe_html.addEventListener('pointerover', function() {
+var titulo = document.getElementById('titulo')
+var infs = document.getElementById('infs')
+var titulo_chut = document.getElementById('titulo2')
+var infs_chut = document.getElementById('infs2')
+
+function out(c) {
+    if (c == 'passe') {
+        infopass.style.display = 'none'
+        infs.innerHTML = ''
+        titulo.innerHTML = ''
+        infs.style.display = 'none'
+        titulo.style.display = 'none'
+    }
+    if (c == 'chute') {
+        infochut.style.display = 'none'
+        infs_chut.innerHTML = ''
+        titulo_chut.innerHTML = ''
+        infs_chut.style.display = 'none'
+        titulo_chut.style.display = 'none'
+    }
+}
+function over(cl) {
     var timer = setInterval(delay, 1000)
     timer
     var c = 0
-    infopass.style.animationName = 'infos'
-    infopass.style.animationDuration = '0.5s'
-    infopass.style.animationFillMode = 'forwards'
-    infopass.style.animationDelay = '2'
-    infopass.style.display = 'block'
-    
+    if (cl == "passe") {
+        infopass.style.animationName = 'infos'
+        infopass.style.animationDuration = '0.5s'
+        infopass.style.animationFillMode = 'forwards'
+        infopass.style.animationDelay = '2'
+        infopass.style.display = 'block'
+        
+    }
+
+    if (cl == "chute") {
+        infochut.style.animationName = 'infos'
+        infochut.style.animationDuration = '0.5s'
+        infochut.style.animationFillMode = 'forwards'
+        infochut.style.animationDelay = '2'
+        infochut.style.display = 'block'
+        
+    }
     function delay(con=0) {
         con += 1
         c += con
-        if (c == 1) {
-            h3.style.display = 'block'
-            p.style.display = 'block'
-            h3.innerHTML = 'Passe'
-            p.innerHTML = `A cada passe são gerados <strong>${cps_passe}</strong> gols por segundo.`
+        if (c == 2) {
+
+            if (cl == 'passe') {
+                titulo.style.display = 'block'
+                infs.style.display = 'block'
+                titulo.innerHTML = 'Passe'
+                infs.innerHTML = `A cada passe são gerados <strong>${cps_passe}</strong> gols por segundo.`
+            }
+            if (cl == 'chute') {
+                titulo_chut.style.display = 'block'
+                infs_chut.style.display = 'block'
+                titulo_chut.innerHTML = 'Chute'
+                infs_chut.innerHTML = `A cada clique são gerados <strong>${cps_chute}</strong> gols.`
+            }
             c = 0
             con = 0
             clearInterval(delay)
         }
     }
-})
-
-
-passe_html.addEventListener('pointerout', function() {
-    infopass.style.display = 'none'
-    p.innerText = '0'
-    h3.innerText = '0'
-    p.style.display = 'none'
-    h3.style.display = 'none'
     
-})
+}
 
 // Inicia o contador
 function contagem() {

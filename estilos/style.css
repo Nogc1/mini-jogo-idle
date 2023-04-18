@@ -85,7 +85,6 @@ section.upgrades {
     position: fixed;
     bottom: 0;
     max-height: 360px;
-    align-items: center;
 }
 
 section#buff {
@@ -224,7 +223,11 @@ input.upgrades {
     }
 }
 
-#h3, #p {
+#titulo, #infs {
+    display: none;
+    margin: 5px;
+}
+#titulo2, #infs2 {
     display: none;
     margin: 5px;
 }
@@ -233,7 +236,7 @@ input.upgrades {
     color: rgb(54, 158, 54);
 }
 
-#infopass {
+#infopass, #infochut {
     position: absolute;
     top: -100px;
     left: 30px;
