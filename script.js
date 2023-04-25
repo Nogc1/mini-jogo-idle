@@ -25,6 +25,7 @@ let calção_html = document.getElementById('calção')
 // Informações dos upgrades
 var infopass = document.getElementById('infopass')
 var infochut = document.getElementById('infochut')
+var infoesc = document.getElementById('infoesc')
 
 // Preço dos upgrades
 var valor_chute = 30
@@ -79,6 +80,8 @@ var titulo = document.getElementById('titulo')
 var infs = document.getElementById('infs')
 var titulo_chut = document.getElementById('titulo2')
 var infs_chut = document.getElementById('infs2')
+var titulo_esc = document.getElementById('titulo3')
+var infs_esc = document.getElementById("infs3")
 
 function out(c) {
     if (c == 'passe') {
@@ -94,6 +97,13 @@ function out(c) {
         titulo_chut.innerHTML = ''
         infs_chut.style.display = 'none'
         titulo_chut.style.display = 'none'
+    }
+    if (c == 'escanteio') {
+        infoesc.style.display = 'none'
+        infs_esc.innerHTML = ''
+        titulo_esc.innerHTML = ''
+        infs_esc.style.display = 'none'
+        titulo_esc.style.display = 'none'
     }
 }
 function over(cl) {
@@ -117,6 +127,14 @@ function over(cl) {
         infochut.style.display = 'block'
         
     }
+
+    if (cl == "escanteio") {
+        infoesc.style.animationName = 'infos'
+        infoesc.style.animationDuration = '0.5s'
+        infoesc.style.animationFillMode = 'forwards'
+        infoesc.style.animationDelay = '2'
+        infoesc.style.display = 'block'
+    }
     function delay(con=0) {
         con += 1
         c += con
@@ -133,6 +151,12 @@ function over(cl) {
                 infs_chut.style.display = 'block'
                 titulo_chut.innerHTML = 'Chute'
                 infs_chut.innerHTML = `A cada clique são gerados <strong>${cps_chute}</strong> gols.`
+            }
+            if (cl == 'escanteio') {
+                titulo_esc.style.display = 'block'
+                infs_esc.style.display = 'block'
+                titulo_esc.innerHTML = 'Escanteio'
+                infs_esc.innerHTML = `A cada escanteio são gerados <strong>${cps_escanteio}</strong> gols por segundo.`
             }
             c = 0
             con = 0

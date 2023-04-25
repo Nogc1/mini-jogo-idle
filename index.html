@@ -36,7 +36,7 @@
         <!-- Upgrades -->
         <input type="button" value="Passe 10" id="passe" class="upgrades" onclick="verif_upgrade(this.id)" onpointerenter="over(this.id)" onpointerleave="out(this.id)">
         <input type="button" value="Chute 30" id="chute" class="upgrades" onclick="verif_upgrade(this.id)" onpointerover="over(this.id)" onpointerout="out(this.id)">
-        <input type="button" value="Escanteio 50" id="escanteio" class="upgrades" onclick="verif_upgrade(this.id)">
+        <input type="button" value="Escanteio 50" id="escanteio" class="upgrades" onclick="verif_upgrade(this.id)" onpointerover="over(this.id)" onpointerout="out(this.id)">
         <input type="button" value="Lateral 1000" id="lateral" class="upgrades" onclick="verif_upgrade(this.id)">
         <input type="button" value="Cabeçada 50000" id="cabeçada" class="upgrades" onclick="verif_upgrade(this.id)">
         <input type="button" value="Agarrar 500000" id="agarrar" class="upgrades" onclick="verif_upgrade(this.id)">
@@ -48,7 +48,10 @@
             <h3 id="titulo2"></h3>
             <p id="infs2"></p>
         </div>
-        <div id="infoesc"></div>
+        <div id="infoesc">
+            <h3 id="titulo3"></h3>
+            <p id="infs3"></p>
+        </div>
         <div id="infolat"></div>
         <div id="infocab"></div>
         <div id="infoagar"></div>
