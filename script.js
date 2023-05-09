@@ -63,6 +63,9 @@ var gols = 0
 var gols_valor = 1
 var cps = 0
 
+// Spans
+var infopasse = document.getElementById("infopasse")
+
 // Atualiza o contador e as variaveis para o novo valor através da função aut
 var automatic = setInterval(aut, 1000)
 automatic
@@ -83,87 +86,23 @@ var infs_chut = document.getElementById('infs2')
 var titulo_esc = document.getElementById('titulo3')
 var infs_esc = document.getElementById("infs3")
 
-function out(c) {
-    if (c == 'passe') {
-        infopass.style.display = 'none'
-        infs.innerHTML = ''
-        titulo.innerHTML = ''
-        infs.style.display = 'none'
-        titulo.style.display = 'none'
-    }
-    if (c == 'chute') {
-        infochut.style.display = 'none'
-        infs_chut.innerHTML = ''
-        titulo_chut.innerHTML = ''
-        infs_chut.style.display = 'none'
-        titulo_chut.style.display = 'none'
-    }
-    if (c == 'escanteio') {
-        infoesc.style.display = 'none'
-        infs_esc.innerHTML = ''
-        titulo_esc.innerHTML = ''
-        infs_esc.style.display = 'none'
-        titulo_esc.style.display = 'none'
-    }
-}
-function over(cl) {
-    var timer = setInterval(delay, 1000)
-    timer
-    var c = 0
-    if (cl == "passe") {
-        infopass.style.animationName = 'infos'
-        infopass.style.animationDuration = '0.5s'
-        infopass.style.animationFillMode = 'forwards'
-        infopass.style.animationDelay = '2'
+function infos(i) {
+    if (i == 'infopasse') {
         infopass.style.display = 'block'
-        
+        titulo.style.display = 'block'
+        infs.style.display = 'block'
+        titulo.innerHTML = 'Passe'
+        infs.innerHTML = `A cada passe são gerados <strong>${cps_passe}</strong> gols por segundo.`
     }
-
-    if (cl == "chute") {
-        infochut.style.animationName = 'infos'
-        infochut.style.animationDuration = '0.5s'
-        infochut.style.animationFillMode = 'forwards'
-        infochut.style.animationDelay = '2'
-        infochut.style.display = 'block'
-        
+    infopasse.setAttribute('onclick', "fechar(this.id)")
+}
+function fechar(f) {
+    if (f == 'infopasse') {
+        infopass.style.display = 'none'
+        titulo.style.display = 'none'
+        infs.style.display = 'none'
     }
-
-    if (cl == "escanteio") {
-        infoesc.style.animationName = 'infos'
-        infoesc.style.animationDuration = '0.5s'
-        infoesc.style.animationFillMode = 'forwards'
-        infoesc.style.animationDelay = '2'
-        infoesc.style.display = 'block'
-    }
-    function delay(con=0) {
-        con += 1
-        c += con
-        if (c == 2) {
-
-            if (cl == 'passe') {
-                titulo.style.display = 'block'
-                infs.style.display = 'block'
-                titulo.innerHTML = 'Passe'
-                infs.innerHTML = `A cada passe são gerados <strong>${cps_passe}</strong> gols por segundo.`
-            }
-            if (cl == 'chute') {
-                titulo_chut.style.display = 'block'
-                infs_chut.style.display = 'block'
-                titulo_chut.innerHTML = 'Chute'
-                infs_chut.innerHTML = `A cada clique são gerados <strong>${cps_chute}</strong> gols.`
-            }
-            if (cl == 'escanteio') {
-                titulo_esc.style.display = 'block'
-                infs_esc.style.display = 'block'
-                titulo_esc.innerHTML = 'Escanteio'
-                infs_esc.innerHTML = `A cada escanteio são gerados <strong>${cps_escanteio}</strong> gols por segundo.`
-            }
-            c = 0
-            con = 0
-            clearInterval(delay)
-        }
-    }
-    
+    infopasse.setAttribute('onclick', "infos(this.id)")
 }
 
 // Inicia o contador

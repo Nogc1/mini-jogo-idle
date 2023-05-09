@@ -243,6 +243,13 @@ input.upgrades{
     left: 30px;
 }
 
+span#infopasse {
+    color: rgb(172, 168, 168);
+    position: absolute;
+    top: 10px;
+    left: 140px;
+   
+}
 input.upgrades:disabled {
     background-image: url('../imagens/tabua2.png');
     background-color: #4b3232;
