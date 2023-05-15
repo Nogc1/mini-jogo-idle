@@ -65,6 +65,8 @@ var cps = 0
 
 // Spans
 var infopasse = document.getElementById("infopasse")
+var infochute = document.getElementById('infochute')
+var infoescanteio = document.getElementById('infoescanteio')
 
 // Atualiza o contador e as variaveis para o novo valor através da função aut
 var automatic = setInterval(aut, 1000)
@@ -94,7 +96,25 @@ function infos(i) {
         titulo.innerHTML = 'Passe'
         infs.innerHTML = `A cada passe são gerados <strong>${cps_passe}</strong> gols por segundo.`
     }
+
+    else if (i == 'infochute') {
+        infochut.style.display = 'block'
+        titulo_chut.style.display = 'block'
+        infs_chut.style.display = 'block'
+        titulo_chut.innerHTML = 'Chute'
+        infs_chut.innerHTML = `A cada chute são gerados <strong>${cps_chute}</strong> gols por clique.`
+    }
+
+    else if (i == 'infoescanteio') {
+        infoesc.style.display = 'block'
+        titulo_esc.style.display = 'block'
+        infs_esc.style.display = 'block'
+        titulo_esc.innerHTML = 'Escanteio'
+        infs_esc.innerHTML = `A cada Escanteio são gerados <strong>${cps_escanteio}</strong> gols por segundo.`
+    }
     infopasse.setAttribute('onclick', "fechar(this.id)")
+    infochute.setAttribute('onclick', "fechar(this.id)")
+    infoescanteio.setAttribute('onclick', 'fechar(this.id)')
 }
 function fechar(f) {
     if (f == 'infopasse') {
@@ -102,7 +122,19 @@ function fechar(f) {
         titulo.style.display = 'none'
         infs.style.display = 'none'
     }
+    else if (f == 'infochute') {
+        infochut.style.display = 'none'
+        titulo_chut.style.display = 'none'
+        infs_chut.style.display = 'none'
+    }
+    else if (f == 'infoescanteio') {
+        infoesc.style.display = 'none'
+        titulo_esc.style.display = 'none'
+        infs_esc.style.display = 'none'
+    }
     infopasse.setAttribute('onclick', "infos(this.id)")
+    infochute.setAttribute('onclick', "infos(this.id)")
+    infoescanteio.setAttribute('onclick', 'infos(this.id)')
 }
 
 // Inicia o contador
