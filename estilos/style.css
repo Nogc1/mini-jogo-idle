@@ -201,7 +201,7 @@ input.upgrades{
 
 #chute, #lateral, #agarrar {
     position: relative;
-    right: -48px;
+    right: -20px;
 }
 
 .upgrades div {
@@ -255,7 +255,7 @@ span#infochute {
     color: rgb(172, 168, 168);
     position: absolute;
     top: 10px;
-    right: 15px;
+    right: 13px;
 }
 span#infoescanteio {
     color: rgb(172, 168, 168);
@@ -267,19 +267,19 @@ span#infolateral {
     color: rgb(172, 168, 168);
     position: absolute;
     top: 70px;
-    right: 15px;
+    right: 13px;
 }
 span#infocabeçada {
     color: rgb(172, 168, 168);
-    position: absolute;
+    position: fixed;
     bottom: 26px;
     left: 140px;
 }
 span#infoagarrar {
     color: rgb(172, 168, 168);
-    position: absolute;
+    position: fixed;
     bottom: 26px;
-    right: 15px;
+    right: 13px;
 }
 
 input.upgrades:disabled {
