@@ -171,6 +171,21 @@ input.buffs {
     margin: 5px 2px 2px 0px;
     border-color: rgb(68, 29, 29);
 }
+#chuteira {
+    background-image: url('../imagens/chuteira.png');
+    background-size: cover;
+    border-color: black;
+}
+#camiseta {
+    background-image: url('../imagens/Camiseta.png');
+    background-size: cover;
+    border-color: black;
+}
+#caneleira {
+    background-image: url('../imagens/caneleira.png');
+    background-size: cover;
+    border-color: black;
+}
 input.buffs:hover {
     background-color: rgb(58, 28, 28);
 }
