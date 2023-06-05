@@ -21,6 +21,7 @@ let camiseta_html = document.getElementById('camiseta')
 let caneleira_html = document.getElementById('caneleira')
 let meia_html = document.getElementById('meia')
 let calção_html = document.getElementById('calção')
+let braçadeira_html = document.getElementById('braçadeira')
 
 // Informações dos upgrades
 var infopass = document.getElementById('infopass')
@@ -44,6 +45,7 @@ var valor_camiseta = 50000
 var valor_caneleira = 100000
 var valor_meia = 1000000
 var valor_calção = 1200000
+var valor_braçadeira = 1700000
 
 // Quanto cada um gera obs. Valor inicial = 0
 var passe = 0
@@ -237,7 +239,7 @@ function powerup(click) {
                     cont1 = 0
                 }
                 if (gradient1 <= 0) {
-                    carrinho_html.style.backgroundImage = 'url(imagens/carrinho.png)'
+                    carrinho_html.style.backgroundImage = 'url(imagens/img-powerup/carrinho.png)'
                     carrinho_html.style.backgroundSize = 'cover'
                     gradient1 = 100
                     seg1 = 0
@@ -268,7 +270,7 @@ function powerup(click) {
                     cont2 = 0
                 }
                 if (gradient2 <= 0) {
-                    drible_html.style.backgroundImage = 'url(imagens/drible.png)'
+                    drible_html.style.backgroundImage = 'url(imagens/img-powerup/drible.png)'
                     drible_html.style.backgroundSize = 'cover'
                     gradient2 = 100
                     seg2 = 0
@@ -341,7 +343,7 @@ function powerup(click) {
                     cont3 = 0
                 }
                 if (gradient3 <= 0) {
-                    simular_html.style.backgroundImage = 'url(imagens/simular.png)'
+                    simular_html.style.backgroundImage = 'url(imagens/img-powerup/simular.png)'
                     simular_html.style.backgroundSize = 'cover'
 
                     gradient3 = 100
@@ -594,6 +596,13 @@ function verif_buff(obtido) {
         cps_agarrar += 4
         calção_html.style.display = 'none'
     }
+    if (obtido == 'braçadeira') {
+        cps_passe += 3
+        cps_chute += 3
+        cps_escanteio += 3
+        cps_agarrar += 3
+        braçadeira_html.style.display = 'none'
+    }
 }
 
 // Função que gera as coisas automático
@@ -680,6 +689,11 @@ function aut() {
             calção_html.disabled = false
         } else {
             calção_html.disabled = true
+        }
+        if (gols > valor_braçadeira) {
+            braçadeira_html.disabled = false
+        } else {
+            braçadeira_html.disabled = true
         }
     }
     

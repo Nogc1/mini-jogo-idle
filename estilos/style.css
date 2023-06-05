@@ -18,7 +18,7 @@ html, body {
 }
 
 body {
-    background-image: url('../imagens/background.png');
+    background-image: url('../imagens/img-temas/background.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -40,7 +40,7 @@ div#contador {
 }
 div#bola {
     margin: auto;
-    background-image: url("../imagens/sprite_bola3.png");
+    background-image: url("../imagens/img-temas/sprite_bola3.png");
     background-repeat: no-repeat;
     background-size: contain;
     width: 40%;
@@ -130,7 +130,7 @@ div.img {
 }
 
 div#dri {
-    background-image: url('../imagens/drible.png');
+    background-image: url('../imagens/img-powerup/drible.png');
     background-size: cover;
     bottom: 0px;
 }
@@ -139,7 +139,7 @@ div#dri {
 }
 
 div#sim {
-    background-image: url('../imagens/simular.png');
+    background-image: url('../imagens/img-powerup/simular.png');
     background-size: cover;
     bottom: 69px;
 }
@@ -148,7 +148,7 @@ div#sim {
 }
 
 div#car {
-    background-image: url('../imagens/carrinho.png');
+    background-image: url('../imagens/img-powerup/carrinho.png');
     background-size: cover;
     top: 0px;
 }
@@ -172,17 +172,32 @@ input.buffs {
     border-color: rgb(68, 29, 29);
 }
 #chuteira {
-    background-image: url('../imagens/chuteira.png');
+    background-image: url('../imagens/img-buffs/chuteira.png');
     background-size: cover;
     border-color: black;
 }
 #camiseta {
-    background-image: url('../imagens/Camiseta.png');
+    background-image: url('../imagens/img-buffs/Camiseta.png');
     background-size: cover;
     border-color: black;
 }
 #caneleira {
-    background-image: url('../imagens/caneleira.png');
+    background-image: url('../imagens/img-buffs/caneleira.png');
+    background-size: cover;
+    border-color: black;
+}
+#meia {
+    background-image: url('../imagens/img-buffs/meia.png');
+    background-size: cover;
+    border-color: black;
+}
+#calção {
+    background-image: url('../imagens/img-buffs/calcao.png');
+    background-size: cover;
+    border-color: black;
+}
+#braçadeira {
+    background-image: url('../imagens/img-buffs/braçadeira.png');
     background-size: cover;
     border-color: black;
 }
