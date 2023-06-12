@@ -667,33 +667,45 @@ function aut() {
         section_html.style.display = 'block'
         if (gols > valor_chuteira) {
             chuteira_html.disabled = false
+            chuteira_html.style.backgroundImage = 'url(imagens/img-buffs/chuteira.png)'
         } else {
             chuteira_html.disabled = true
+            chuteira_html.style.backgroundImage = 'url(imagens/img-buffs/X.png)'
         }
         if (gols > valor_camiseta) {
             camiseta_html.disabled = false
+            camiseta_html.style.backgroundImage = 'url(imagens/img-buffs/Camiseta.png)'
         } else {
             camiseta_html.disabled = true
+            camiseta_html.style.backgroundImage = 'url(imagens/img-buffs/X.png)'
         }
         if (gols > valor_caneleira) {
             caneleira_html.disabled = false
+            caneleira_html.style.backgroundImage = 'url(imagens/img-buffs/caneleira.png)'
         } else {
             caneleira_html.disabled = true
+            caneleira_html.style.backgroundImage = 'url(imagens/img-buffs/X.png)'
         }
         if (gols > valor_meia) {
             meia_html.disabled = false
+            meia_html.style.backgroundImage = 'url(imagens/img-buffs/meia.png)'
         } else {
             meia_html.disabled = true
+            meia_html.style.backgroundImage = 'url(imagens/img-buffs/X.png)'
         }
         if (gols > valor_calção) {
             calção_html.disabled = false
+            calção_html.style.backgroundImage = 'url(imagens/img-buffs/calcao.png)'
         } else {
             calção_html.disabled = true
+            calção_html.style.backgroundImage = 'url(imagens/img-buffs/X.png)'
         }
         if (gols > valor_braçadeira) {
             braçadeira_html.disabled = false
+            braçadeira_html.style.backgroundImage = 'url(imagens/img-buffs/braçadeira.png)'
         } else {
             braçadeira_html.disabled = true
+            braçadeira_html.style.backgroundImage = 'url(imagens/img-buffs/X.png)'
         }
     }
     
