@@ -14,8 +14,21 @@
 <body>
     <div id="contador"></div>
     <div id="bola" onclick="contagem()"></div>
-    <section class="buffs" id="buff">
-        <!-- Buffs -->
+    <nav id="menu">
+        <a href="#">Melhoria</a>
+        <img src="" alt="">
+        <a href="#">Início</a>
+        <img src="imagens/img-temas/sprite_bola1.png" alt="" id="inicio">
+        <a href="#">Loja</a>
+        <img src="" alt="">
+    </nav>
+    <!-- TEMPORÁRIAMENTE DESATIVADO
+                    V
+                    V 
+                    V                   
+    -->
+    <!-- <section class="buffs" id="buff">
+        Buffs
         <h1>Loja</h1>
         <input type="button" class="buffs" id="chuteira" onclick="verif_buff(this.id)">
         <input type="button" class="buffs" id="camiseta" onclick="verif_buff(this.id)">
@@ -25,7 +38,7 @@
         <input type="button" class="buffs" id="braçadeira" onclick="verif_buff(this.id)">
     </section>
     <section id="powerup">
-        <!-- Powerups -->
+        Powerups
         <div class="img" id="car"></div>
         <div class="img" id="dri"></div>
         <div class="img" id="sim"></div>
@@ -34,7 +47,7 @@
         <input type="button" class="powerup" id="simular" onclick="powerup(this.id)">
     </section>
     <section class="upgrades"> 
-        <!-- Upgrades -->
+        Upgrades
         <input type="button" value="Passe 10" id="passe" class="upgrades" onclick="verif_upgrade(this.id)">
         <span class="material-symbols-outlined" id="infopasse" onclick="infos(this.id)">info</span>
         <input type="button" value="Chute 30" id="chute" class="upgrades" onclick="verif_upgrade(this.id)">
@@ -71,7 +84,7 @@
             <h3 id="titulo6"></h3>
             <p id="infs6"></p>
         </div>
-    </section>
+    </section> -->
     <script src="script.js"></script>
 </body>
 </html>

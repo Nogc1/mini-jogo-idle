@@ -24,6 +24,7 @@ body {
     background-attachment: fixed;
     background-color: rgb(54, 158, 54);
     background-position: top;
+    overflow: hidden;
 }
 div#contador {
     font-size: 22px;
@@ -76,6 +77,31 @@ div#bola:hover {
         width: 40%;
         height: 145px;
     }
+}
+
+nav#menu {
+    background-color: #251305da;
+    position: absolute;
+    bottom: 0px;
+    margin: auto;
+    padding: 100px 0px 10px 0px;
+    width: 100%;
+    text-align: center;
+}
+
+nav a {
+    margin: 20px;
+    color: rgba(255, 255, 255, 0.774);
+    font-size: 20px;
+    padding-bottom: 0px;
+    text-decoration: none;
+}
+
+#inicio {
+    position: absolute;
+    top: 0px;
+    left: 140px;
+    height: 70%;
 }
 
 section.upgrades {
