@@ -12,79 +12,73 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
 <body>
-    <div id="contador"></div>
-    <div id="bola" onclick="contagem()"></div>
-    <nav id="menu">
-        <a href="#">Melhoria</a>
-        <img src="" alt="">
-        <a href="#">Início</a>
-        <img src="imagens/img-temas/sprite_bola1.png" alt="" id="inicio">
-        <a href="#">Loja</a>
-        <img src="" alt="">
-    </nav>
-    <!-- TEMPORÁRIAMENTE DESATIVADO
-                    V
-                    V 
-                    V                   
-    -->
-    <!-- <section class="buffs" id="buff">
-        Buffs
-        <h1>Loja</h1>
-        <input type="button" class="buffs" id="chuteira" onclick="verif_buff(this.id)">
-        <input type="button" class="buffs" id="camiseta" onclick="verif_buff(this.id)">
-        <input type="button" class="buffs" id="caneleira" onclick="verif_buff(this.id)">
-        <input type="button" class="buffs" id="meia" onclick="verif_buff(this.id)">
-        <input type="button" class="buffs" id="calção" onclick="verif_buff(this.id)">
-        <input type="button" class="buffs" id="braçadeira" onclick="verif_buff(this.id)">
-    </section>
-    <section id="powerup">
-        Powerups
-        <div class="img" id="car"></div>
-        <div class="img" id="dri"></div>
-        <div class="img" id="sim"></div>
-        <input type="button" class="powerup" id="carrinho" onclick="powerup(this.id)">
-        <input type="button" class="powerup" id="drible" onclick="powerup(this.id)">
-        <input type="button" class="powerup" id="simular" onclick="powerup(this.id)">
-    </section>
-    <section class="upgrades"> 
-        Upgrades
-        <input type="button" value="Passe 10" id="passe" class="upgrades" onclick="verif_upgrade(this.id)">
-        <span class="material-symbols-outlined" id="infopasse" onclick="infos(this.id)">info</span>
-        <input type="button" value="Chute 30" id="chute" class="upgrades" onclick="verif_upgrade(this.id)">
-        <span class="material-symbols-outlined" id="infochute" onclick="infos(this.id)">info</span>
-        <input type="button" value="Escanteio 50" id="escanteio" class="upgrades" onclick="verif_upgrade(this.id)">
-        <span class="material-symbols-outlined" id="infoescanteio" onclick="infos(this.id)">info</span>
-        <input type="button" value="Lateral 1000" id="lateral" class="upgrades" onclick="verif_upgrade(this.id)">
-        <span class="material-symbols-outlined" id="infolateral" onclick="infos(this.id)">info</span>
-        <input type="button" value="Cabeçada 50000" id="cabeçada" class="upgrades" onclick="verif_upgrade(this.id)">
-        <span class="material-symbols-outlined" id="infocabeçada" onclick="infos(this.id)">info</span>
-        <input type="button" value="Agarrar 500000" id="agarrar" class="upgrades" onclick="verif_upgrade(this.id)">
-        <span class="material-symbols-outlined" id="infoagarrar" onclick="infos(this.id)">info</span>
-        <div id="infopass">
-            <h3 id="titulo"></h3>
-            <p id="infs"></p>
-        </div>
-        <div id="infochut">
-            <h3 id="titulo2"></h3>
-            <p id="infs2"></p>
-        </div>
-        <div id="infoesc">
-            <h3 id="titulo3"></h3>
-            <p id="infs3"></p>
-        </div>
-        <div id="infolat">
-            <h3 id="titulo4"></h3>
-            <p id="infs4"></p>
-        </div>
-        <div id="infocab">
-            <h3 id="titulo5"></h3>
-            <p id="infs5"></p>
-        </div>
-        <div id="infoagar">
-            <h3 id="titulo6"></h3>
-            <p id="infs6"></p>
-        </div>
-    </section> -->
+    
+    <div id="container">
+        <nav id="menu">
+            <a href="#buff">Melhoria</a>
+            <a href="#powerup">Início</a>
+            <a href="#upgrades">Loja</a>
+        </nav>
+        <div id="contador"></div>
+        <div id="bola" onclick="contagem()"></div>
+        <section id="powerup">
+            <!-- Powerups -->
+            <div class="img" id="car"></div>
+            <div class="img" id="dri"></div>
+            <div class="img" id="sim"></div>
+            <input type="button" class="powerup" id="carrinho" onclick="powerup(this.id)">
+            <input type="button" class="powerup" id="drible" onclick="powerup(this.id)">
+            <input type="button" class="powerup" id="simular" onclick="powerup(this.id)">
+        </section>
+        <section class="buffs" id="buff">
+                <!-- Buffs -->
+            <input type="button" class="buffs" id="chuteira" onclick="verif_buff(this.id)">
+            <input type="button" class="buffs" id="camiseta" onclick="verif_buff(this.id)">
+            <input type="button" class="buffs" id="caneleira" onclick="verif_buff(this.id)">
+            <input type="button" class="buffs" id="meia" onclick="verif_buff(this.id)">
+            <input type="button" class="buffs" id="calção" onclick="verif_buff(this.id)">
+            <input type="button" class="buffs" id="braçadeira" onclick="verif_buff(this.id)">
+        </section>
+        <section class="upgrades">
+                <!-- Upgrades -->
+            <input type="button" value="Passe 10" id="passe" class="upgrades" onclick="verif_upgrade(this.id)">
+            <span class="material-symbols-outlined" id="infopasse" onclick="infos(this.id)">info</span>
+            <input type="button" value="Chute 30" id="chute" class="upgrades" onclick="verif_upgrade(this.id)">
+            <span class="material-symbols-outlined" id="infochute" onclick="infos(this.id)">info</span>
+            <input type="button" value="Escanteio 50" id="escanteio" class="upgrades" onclick="verif_upgrade(this.id)">
+            <span class="material-symbols-outlined" id="infoescanteio" onclick="infos(this.id)">info</span>
+            <input type="button" value="Lateral 1000" id="lateral" class="upgrades" onclick="verif_upgrade(this.id)">
+            <span class="material-symbols-outlined" id="infolateral" onclick="infos(this.id)">info</span>
+            <input type="button" value="Cabeçada 50000" id="cabeçada" class="upgrades" onclick="verif_upgrade(this.id)">
+            <span class="material-symbols-outlined" id="infocabeçada" onclick="infos(this.id)">info</span>
+            <input type="button" value="Agarrar 500000" id="agarrar" class="upgrades" onclick="verif_upgrade(this.id)">
+            <span class="material-symbols-outlined" id="infoagarrar" onclick="infos(this.id)">info</span>
+            <div id="infopass">
+                <h3 id="titulo"></h3>
+                <p id="infs"></p>
+            </div>
+            <div id="infochut">
+                <h3 id="titulo2"></h3>
+                <p id="infs2"></p>
+            </div>
+            <div id="infoesc">
+                <h3 id="titulo3"></h3>
+                <p id="infs3"></p>
+            </div>
+            <div id="infolat">
+                <h3 id="titulo4"></h3>
+                <p id="infs4"></p>
+            </div>
+            <div id="infocab">
+                <h3 id="titulo5"></h3>
+                <p id="infs5"></p>
+            </div>
+            <div id="infoagar">
+                <h3 id="titulo6"></h3>
+                <p id="infs6"></p>
+            </div>
+        </section>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>

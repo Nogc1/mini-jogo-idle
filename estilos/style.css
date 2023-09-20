@@ -12,19 +12,16 @@
     padding: 0px;
 }
 
-html, body {
-    height: 100vh;
-    width: 100vw;
-}
-
 body {
     background-image: url('../imagens/img-temas/background.png');
-    background-size: cover;
+    background-size: cover ;
     background-repeat: no-repeat;
-    background-attachment: fixed;
     background-color: rgb(54, 158, 54);
-    background-position: top;
-    overflow: hidden;
+    background-position: center;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    height: 100vh;
 }
 div#contador {
     font-size: 22px;
@@ -35,12 +32,10 @@ div#contador {
     display: block;
     height: 50px;
 }
-
 #cps {
     font-size: 16px;
 }
 div#bola {
-    margin: auto;
     background-image: url("../imagens/img-temas/sprite_bola3.png");
     background-repeat: no-repeat;
     background-size: contain;
@@ -49,6 +44,9 @@ div#bola {
     animation-name: bola2;
     animation-duration: 0.8s;
     animation-fill-mode: forwards;
+    position: absolute;
+    left: 30%;
+    bottom: 30%;
 }
 div#bola:hover {
     animation-name: bola;
@@ -81,53 +79,39 @@ div#bola:hover {
 
 nav#menu {
     background-color: #251305da;
-    position: absolute;
+    position: fixed;
     bottom: 0px;
-    margin: auto;
-    padding: 100px 0px 10px 0px;
-    width: 100%;
-    text-align: center;
+    margin: 0px;
+    height: 80px;
 }
 
 nav a {
-    margin: 20px;
     color: rgba(255, 255, 255, 0.774);
     font-size: 20px;
-    padding-bottom: 0px;
     text-decoration: none;
 }
 
-#inicio {
+section.upgrades {
+    background-image: url('../imagens/');
+    background-size: contain;
+    background-color: #aa520e;
+    min-width: 100vw;
+    height: 100vh;
+    margin-left: 720px;
     position: absolute;
     top: 0px;
-    left: 140px;
-    height: 70%;
-}
-
-section.upgrades {
-    background-image: url('../imagens/madeira.png');
-    background-size: contain;
-    background-color: #251305;
-    position: fixed;
-    bottom: 0;
-    max-height: 360px;
 }
 
 section#buff {
     background-image: url('../imagens/madeira.png');
     background-size: contain;
     background-color: #251305;
-    width: 216px;
-    max-height: 111px;
-    margin-left: 20px;
-    display: none;
-    position: fixed;
-    bottom: 179px;
+    margin-left: 100vw;
+    min-width: 100vw;
+    height: 100vh;
     color: rgb(209, 209, 209);
-}
-
-#buff h1 {
-    text-align: center;
+    position: absolute;
+    top: 0px;
 }
 
 section#powerup {
@@ -193,13 +177,15 @@ input.powerup:hover {
 }
 
 input.buffs {
-    width: 30px;
-    height: 30px;
     background-image: url('../imagens/tabua1.png');
     background-size: contain;
     background-color: #361515;
-    margin: 5px 2px 2px 0px;
     border-color: rgb(68, 29, 29);
+    width: 100px;
+    height: 90px;
+    margin: 10px;
+    display: block;
+    align-items: center;
 }
 #chuteira {
     background-image: url('../imagens/img-buffs/chuteira.png');
@@ -241,29 +227,14 @@ input.buffs:disabled {
 }
 
 input.upgrades{
-    text-align: left;
     background-image: url('../imagens/tabua1.png');
     background-size: contain;
     color: rgb(255, 0, 0);
-    min-width: 160px;
-    height: 50px;
     background-color: rgb(54, 21, 21);
-    display: inline;
-    padding: 5px;
-    margin: 5px auto 5px auto;
     border-color: rgb(68, 29, 29);
     font-size: 18px;
+    display: block;
 }
-
-#passe, #escanteio, #cabeçada {
-    margin-left: 8px;
-}
-
-#chute, #lateral, #agarrar {
-    position: relative;
-    right: -20px;
-}
-
 .upgrades div {
     display: none;
     color: rgb(209, 209, 209);
@@ -299,47 +270,25 @@ input.upgrades{
     font-size: 14px;
     animation-name: infos;
     animation-delay: 2s;
-    position: absolute;
-    top: -100px;
-    left: 30px;
 }
 
 span#infopasse {
     color: rgb(172, 168, 168);
-    position: absolute;
-    top: 10px;
-    left: 140px;
-   
 }
 span#infochute {
     color: rgb(172, 168, 168);
-    position: absolute;
-    top: 10px;
-    right: 13px;
 }
 span#infoescanteio {
     color: rgb(172, 168, 168);
-    position: absolute;
-    top: 70px;
-    left: 140px;
 }
 span#infolateral {
     color: rgb(172, 168, 168);
-    position: absolute;
-    top: 70px;
-    right: 13px;
 }
 span#infocabeçada {
     color: rgb(172, 168, 168);
-    position: fixed;
-    bottom: 26px;
-    left: 140px;
 }
 span#infoagarrar {
-    color: rgb(172, 168, 168);
-    position: fixed;
-    bottom: 26px;
-    right: 13px;
+    color: rgb(172, 168, 168);  
 }
 
 input.upgrades:disabled {
