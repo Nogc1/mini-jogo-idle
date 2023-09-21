@@ -24,12 +24,7 @@ let calção_html = document.getElementById('calção')
 let braçadeira_html = document.getElementById('braçadeira')
 
 // Informações dos upgrades
-var infopass = document.getElementById('infopass')
-var infochut = document.getElementById('infochut')
-var infoesc = document.getElementById('infoesc')
-var infolat = document.getElementById('infolat')
-var infocab = document.getElementById('infocab')
-var infoagar = document.getElementById('infoagar')
+var upgrade = document.getElementById('upgrade')
 
 // Preço dos upgrades
 var valor_chute = 30
@@ -68,14 +63,6 @@ var gols = 0
 var gols_valor = 1
 var cps = 0
 
-// Spans
-var infopasse = document.getElementById("infopasse")
-var infochute = document.getElementById('infochute')
-var infoescanteio = document.getElementById('infoescanteio')
-var infolateral = document.getElementById('infolateral')
-var infocabeçada = document.getElementById('infocabeçada')
-var infoagarrar = document.getElementById('infoagarrar')
-
 // Atualiza o contador e as variaveis para o novo valor através da função aut
 var automatic = setInterval(aut, 1000)
 automatic
@@ -88,114 +75,18 @@ lateral_html.disabled = true
 cabeçada_html.disabled = true
 agarrar_html.disabled = true
 
-// Mostra as informações na tela quando o botão (i) for pressionado
-var titulo = document.getElementById('titulo')
-var infs = document.getElementById('infs')
-var titulo_chut = document.getElementById('titulo2')
-var infs_chut = document.getElementById('infs2')
-var titulo_esc = document.getElementById('titulo3')
-var infs_esc = document.getElementById("infs3")
-var titulo_lat = document.getElementById("titulo4")
-var infs_lat = document.getElementById("infs4")
-var titulo_cab = document.getElementById('titulo5')
-var infs_cab = document.getElementById('infs5')
-var titulo_agar = document.getElementById('titulo6')
-var infs_agar = document.getElementById('infs6')
-
-function infos(i) {
-    if (i == 'infopasse') {
-        infopass.style.display = 'block'
-        titulo.style.display = 'block'
-        infs.style.display = 'block'
-        titulo.innerHTML = 'Passe'
-        infs.innerHTML = `A cada passe são gerados <strong>${cps_passe}</strong> gols por segundo.`
-        infopasse.setAttribute('onclick', "fechar(this.id)")
+function fechar(o) {
+    upgrade.style.display = 'none'
+    section_html.style.display = 'none'
+}
+function abrir(opcao) {
+    if (opcao == 'loja') {
+        upgrade.style.display = "block"
     }
-
-    else if (i == 'infochute') {
-        infochut.style.display = 'block'
-        titulo_chut.style.display = 'block'
-        infs_chut.style.display = 'block'
-        titulo_chut.innerHTML = 'Chute'
-        infs_chut.innerHTML = `A cada chute são gerados <strong>${cps_chute}</strong> gols por clique.`
-        infochute.setAttribute('onclick', "fechar(this.id)")
-    }
-
-    else if (i == 'infoescanteio') {
-        infoesc.style.display = 'block'
-        titulo_esc.style.display = 'block'
-        infs_esc.style.display = 'block'
-        titulo_esc.innerHTML = 'Escanteio'
-        infs_esc.innerHTML = `A cada Escanteio são gerados <strong>${cps_escanteio}</strong> gols por segundo.`
-        infoescanteio.setAttribute('onclick', 'fechar(this.id)')
-    }
-
-    else if (i == 'infolateral') {
-        infolat.style.display = 'block'
-        titulo_lat.style.display = 'block'
-        infs_lat.style.display = 'block'
-        titulo_lat.innerHTML = 'Lateral'
-        infs_lat.innerHTML = `A cada Lateral são gerados <strong>${cps_lateral}</strong> gols por segundo.`
-        infolateral.setAttribute('onclick', 'fechar(this.id)')
-    }
-
-    else if (i == 'infocabeçada') {
-        infocab.style.display = 'block'
-        titulo_cab.style.display = 'block'
-        infs_cab.style.display = 'block'
-        titulo_cab.innerHTML = 'Cabeçada'
-        infs_cab.innerHTML = `A cada Cabeçada são gerados <strong>${cps_cabeçada}</strong> gols por segundo.`
-        infocabeçada.setAttribute('onclick', 'fechar(this.id)')
-    }
-
-    else if (i == 'infoagarrar') {
-        infoagar.style.display = 'block'
-        titulo_agar.style.display = 'block'
-        infs_agar.style.display = 'block'
-        titulo_agar.innerHTML = 'Agarrar'
-        infs_agar.innerHTML = `A cada Agarrar são gerados <strong>${cps_agarrar}</strong> gols por segundo.`
-        infoagarrar.setAttribute('onclick', 'fechar(this.id)')
+    if (opcao == 'treino') {
+        section_html.style.display = 'block'
     }
 }
-function fechar(f) {
-    if (f == 'infopasse') {
-        infopass.style.display = 'none'
-        titulo.style.display = 'none'
-        infs.style.display = 'none'
-        infopasse.setAttribute('onclick', "infos(this.id)")
-    }
-    else if (f == 'infochute') {
-        infochut.style.display = 'none'
-        titulo_chut.style.display = 'none'
-        infs_chut.style.display = 'none'
-        infochute.setAttribute('onclick', "infos(this.id)")
-    }
-    else if (f == 'infoescanteio') {
-        infoesc.style.display = 'none'
-        titulo_esc.style.display = 'none'
-        infs_esc.style.display = 'none'
-        infoescanteio.setAttribute('onclick', 'infos(this.id)')
-    }
-    else if (f == 'infolateral') {
-        infolat.style.display = 'none'
-        titulo_lat.style.display = 'none'
-        infs_lat.style.display = 'none'
-        infolateral.setAttribute('onclick', 'infos(this.id)')
-    }
-    else if (f == 'infocabeçada') {
-        infocab.style.display = 'none'
-        titulo_cab.style.display = 'none'
-        infs_cab.style.display = 'none'
-        infocabeçada.setAttribute('onclick', 'infos(this.id)')
-    }
-    else if (f == 'infoagarrar') {
-        infoagar.style.display = 'none'
-        titulo_agar.style.display = 'none'
-        infs_agar.style.display = 'none'
-        infoagarrar.setAttribute('onclick', 'infos(this.id)')
-    }
-}
-
 // Inicia o contador
 function contagem() {
     gols += gols_valor
@@ -663,50 +554,48 @@ function aut() {
     }
 
     // Verifica se o buff pode ser comprado
-    if (gols >= 700) {
-        section_html.style.display = 'block'
-        if (gols > valor_chuteira) {
+    
+    if (gols > valor_chuteira) {
             chuteira_html.disabled = false
             chuteira_html.style.backgroundImage = 'url(imagens/img-buffs/chuteira.png)'
-        } else {
+    } else {
             chuteira_html.disabled = true
             chuteira_html.style.backgroundImage = 'url(imagens/img-buffs/X.png)'
-        }
-        if (gols > valor_camiseta) {
+    }
+    if (gols > valor_camiseta) {
             camiseta_html.disabled = false
             camiseta_html.style.backgroundImage = 'url(imagens/img-buffs/Camiseta.png)'
-        } else {
+    } else {
             camiseta_html.disabled = true
             camiseta_html.style.backgroundImage = 'url(imagens/img-buffs/X.png)'
-        }
-        if (gols > valor_caneleira) {
+    }
+    if (gols > valor_caneleira) {
             caneleira_html.disabled = false
             caneleira_html.style.backgroundImage = 'url(imagens/img-buffs/caneleira.png)'
-        } else {
+    } else {
             caneleira_html.disabled = true
             caneleira_html.style.backgroundImage = 'url(imagens/img-buffs/X.png)'
-        }
-        if (gols > valor_meia) {
+    }
+    if (gols > valor_meia) {
             meia_html.disabled = false
             meia_html.style.backgroundImage = 'url(imagens/img-buffs/meia.png)'
-        } else {
+    } else {
             meia_html.disabled = true
             meia_html.style.backgroundImage = 'url(imagens/img-buffs/X.png)'
-        }
-        if (gols > valor_calção) {
+    }
+     if (gols > valor_calção) {
             calção_html.disabled = false
             calção_html.style.backgroundImage = 'url(imagens/img-buffs/calcao.png)'
-        } else {
+    } else {
             calção_html.disabled = true
             calção_html.style.backgroundImage = 'url(imagens/img-buffs/X.png)'
-        }
-        if (gols > valor_braçadeira) {
+    }
+    if (gols > valor_braçadeira) {
             braçadeira_html.disabled = false
             braçadeira_html.style.backgroundImage = 'url(imagens/img-buffs/braçadeira.png)'
-        } else {
+    } else {
             braçadeira_html.disabled = true
             braçadeira_html.style.backgroundImage = 'url(imagens/img-buffs/X.png)'
-        }
     }
     
 

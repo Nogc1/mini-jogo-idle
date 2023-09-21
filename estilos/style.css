@@ -79,39 +79,52 @@ div#bola:hover {
 
 nav#menu {
     background-color: #251305da;
-    position: fixed;
+    position: absolute;
     bottom: 0px;
     margin: 0px;
-    height: 80px;
+    height: 100px;
+    width: 100vw;
+    text-align: center;
 }
 
-nav a {
-    color: rgba(255, 255, 255, 0.774);
-    font-size: 20px;
-    text-decoration: none;
+nav div {
+    width: 100px;
+    height: 70px;
+    border: none;
+    margin-top: 5px;
+    display: inline-block;
+}
+
+#treino {
+    background-image: url('../imagens/img-temas/bola-de-futebol-1.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
 }
 
 section.upgrades {
-    background-image: url('../imagens/');
+    background-image: url('../imagens/madeira.png');
     background-size: contain;
-    background-color: #aa520e;
+    background-color: #251305;
     min-width: 100vw;
     height: 100vh;
-    margin-left: 720px;
+    color: rgb(209, 209, 209);
     position: absolute;
     top: 0px;
+    display: none;
 }
 
 section#buff {
     background-image: url('../imagens/madeira.png');
     background-size: contain;
     background-color: #251305;
-    margin-left: 100vw;
     min-width: 100vw;
     height: 100vh;
     color: rgb(209, 209, 209);
     position: absolute;
     top: 0px;
+    display: none;
 }
 
 section#powerup {
@@ -234,61 +247,14 @@ input.upgrades{
     border-color: rgb(68, 29, 29);
     font-size: 18px;
     display: block;
-}
-.upgrades div {
-    display: none;
-    color: rgb(209, 209, 209);
-    background-color: rgba(12, 12, 12, 0.815);
-    border-radius: 5px;
-    max-width: 200px;
-    height: 80px;
-}
+    height: 50px;
+    width: 150px;
+    margin: 30px 10px 10px 10px;
 
-@keyframes infos {
-    from {
-        width: 0%;
-        height: 0%;
-    }
-    to {
-        width: 200px;
-        height: 80px;
-    }
-}
-
-#titulo, #infs, #titulo2, #infs2, #titulo3, #infs3, #titulo4, #infs4, #titulo5, #infs5, #titulo6, #infs6{
-    display: none;
-    margin: 5px;
-    animation-name: infos;
-    animation-delay: 2s;
 }
 
 .upgrades strong {
     color: rgb(54, 158, 54);
-}
-
-#infopass, #infochut, #infoesc, #infolat, #infocab, #infoagar{
-    font-size: 14px;
-    animation-name: infos;
-    animation-delay: 2s;
-}
-
-span#infopasse {
-    color: rgb(172, 168, 168);
-}
-span#infochute {
-    color: rgb(172, 168, 168);
-}
-span#infoescanteio {
-    color: rgb(172, 168, 168);
-}
-span#infolateral {
-    color: rgb(172, 168, 168);
-}
-span#infocabeçada {
-    color: rgb(172, 168, 168);
-}
-span#infoagarrar {
-    color: rgb(172, 168, 168);  
 }
 
 input.upgrades:disabled {
@@ -296,4 +262,15 @@ input.upgrades:disabled {
     background-color: #4b3232;
     border-color: rgba(48, 30, 30, 0.61);
     color: rgba(255, 0, 0, 0.767);
+}
+
+.fechar {
+    background-color: red;
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    display: block;
+    height: 30px;
+    width: 30px;
+    text-align: center;
 }
