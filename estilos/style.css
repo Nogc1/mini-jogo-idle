@@ -93,10 +93,12 @@ nav div {
     border: none;
     margin-top: 5px;
     display: inline-block;
+    color: white;
+    font-size: 20px;
 }
 
 #treino {
-    background-image: url('../imagens/img-temas/bola-de-futebol-1.png');
+    background-image: url();
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
