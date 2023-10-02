@@ -78,7 +78,9 @@ div#bola:hover {
 }
 
 nav#menu {
+    background-image: url('../imagens/madeira.png');
     background-color: #251305da;
+    background-size: contain;
     position: absolute;
     bottom: 0px;
     margin: 0px;
@@ -97,12 +99,41 @@ nav div {
     font-size: 20px;
 }
 
+label {
+    position: absolute;
+    bottom: 10px;
+    color: white;
+    font-size: 20px;
+}
+
+#labloja {
+    left: 55px;
+}
+#labtreino {
+    left: 155px;
+}
+#labalgo {
+    right: 58px;
+}
+
 #treino {
-    background-image: url();
+    background-image: url('../imagens/treino.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 
+}
+#loja {
+    background-image: url('../imagens/loja.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#algo {
+    background-image: url('../imagens/algo.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 section.upgrades {

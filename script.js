@@ -81,10 +81,10 @@ function fechar(o) {
 }
 function abrir(opcao) {
     if (opcao == 'loja') {
-        upgrade.style.display = "block"
+        section_html.style.display = "block"
     }
     if (opcao == 'treino') {
-        section_html.style.display = 'block'
+        upgrade.style.display = 'block'
     }
 }
 // Inicia o contador
