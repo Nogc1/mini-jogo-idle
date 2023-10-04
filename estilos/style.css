@@ -10,6 +10,7 @@
 * {
     margin: 0px;
     padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
@@ -24,13 +25,13 @@ body {
     height: 100vh;
 }
 div#contador {
+    color: white;
     font-size: 22px;
     text-align: center;
-    margin: auto;
-    padding-top: 20px;
-    margin-bottom: 85px;
     display: block;
     height: 50px;
+    position: relative;
+    top: 100px;
 }
 #cps {
     font-size: 16px;
@@ -38,14 +39,14 @@ div#contador {
 div#bola {
     background-image: url("../imagens/img-temas/sprite_bola3.png");
     background-repeat: no-repeat;
-    background-size: contain;
-    width: 40%;
-    height: 145px;
+    background-size: cover;
+    width: 49%;
+    height: 30%;
     animation-name: bola2;
     animation-duration: 0.8s;
     animation-fill-mode: forwards;
     position: absolute;
-    left: 30%;
+    left: 27%;
     bottom: 30%;
 }
 div#bola:hover {
@@ -57,23 +58,23 @@ div#bola:hover {
 
 @keyframes bola {
     from {
-        width: 40%;
-        height: 145px;
+        width: 46%;
+        height: 165px;
     }
     to {
         width: 49%;
-        height: 27%;
+        height: 30%;
     }
 }
 
 @keyframes bola2 {
     from {
         width: 49%;
-        height: 27%;
+        height: 30%;
     }
     to {
-        width: 40%;
-        height: 145px;
+        width: 46%;
+        height: 165px;
     }
 }
 
@@ -216,6 +217,14 @@ div#car {
     top: 0px;
 }
 
+#buff h2 {
+    font-size: 36px;
+    text-align: center;
+}
+#upgrade h2 {
+    font-size: 36px;
+    text-align: center;
+}
 input.powerup:hover {
     transform: translate(-2px, -2px);
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.603);
@@ -227,11 +236,9 @@ input.buffs {
     background-size: contain;
     background-color: #361515;
     border-color: rgb(68, 29, 29);
-    width: 100px;
-    height: 90px;
-    margin: 10px;
-    display: block;
-    align-items: center;
+    width: 50px;
+    height: 50px;
+    margin: 10px 0px 10px 5px;
 }
 #chuteira {
     background-image: url('../imagens/img-buffs/chuteira.png');
@@ -281,9 +288,8 @@ input.upgrades{
     font-size: 18px;
     display: block;
     height: 50px;
-    width: 150px;
-    margin: 30px 10px 10px 10px;
-
+    width: 330px;
+    margin: 10px 15px 0px 15px;
 }
 
 .upgrades strong {
@@ -298,12 +304,13 @@ input.upgrades:disabled {
 }
 
 .fechar {
-    background-color: red;
+    background-image: url('../imagens/x.png');
+    background-position: center;
+    background-size: cover;
     position: absolute;
     top: 10px;
     right: 5px;
     display: block;
     height: 30px;
     width: 30px;
-    text-align: center;
 }
