@@ -1,5 +1,6 @@
 // Botão de gols
 let contador = document.getElementById('contador')
+let cont_gols = document.getElementById('gol')
 
 // Botões de powerup
 let carrinho_html = document.getElementById('carrinho')
@@ -68,6 +69,7 @@ var automatic = setInterval(aut, 1000)
 automatic
 
 contador.innerHTML = `<p>Gols: ${gols.toFixed(0)}</p><p id='cps'>Gols por segundo: ${cps.toFixed(2)}</p>`
+cont_gols.innerHTML = `${gols.toFixed(0)}`
 chute_html.disabled = true
 passe_html.disabled = true
 escanteio_html.disabled = true
@@ -86,10 +88,17 @@ function abrir(opcao) {
     if (opcao == 'treino') {
         upgrade.style.display = 'block'
     }
+    if (opcao == 'algo') {
+        window.alert('NAOEVIRUS.exe foi instalado com sucesso.     :)')
+    }
+}
+function configuracao() {
+    window.alert('Trabalhando nisso...     :/')
 }
 // Inicia o contador
 function contagem() {
     gols += gols_valor
+    cont_gols.innerHTML = `${gols.toFixed(0)}`
     contador.innerHTML = `<p>Gols: ${gols.toFixed(0)}</p><p id='cps'>Gols por segundo: ${cps.toFixed(2)}</p>`
 }
 
@@ -643,5 +652,6 @@ function aut() {
     lateral_html.value = `Lateral ${valor_lateral.toFixed(0)}`
     cabeçada_html.value = `Cabeçada ${valor_cabeçada.toFixed(0)}`
     agarrar_html.value = `Agarrar ${valor_agarrar.toFixed(0)}`
-    contador.innerHTML =`<p>Gols: ${gols.toFixed(0)}</p><p id='cps'>Gols por segundo: ${cps.toFixed(2)}</p>`
+    contador.innerHTML = `<p>Gols: ${gols.toFixed(0)}</p><p id='cps'>Gols por segundo: ${cps.toFixed(2)}</p>`
+    cont_gols.innerHTML = `${gols.toFixed(0)}`
 }

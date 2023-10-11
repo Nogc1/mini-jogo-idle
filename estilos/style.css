@@ -40,14 +40,14 @@ div#bola {
     background-image: url("../imagens/img-temas/sprite_bola3.png");
     background-repeat: no-repeat;
     background-size: cover;
-    width: 49%;
-    height: 30%;
+    width: 46%;
+    height: 165px;
     animation-name: bola2;
     animation-duration: 0.8s;
     animation-fill-mode: forwards;
     position: absolute;
     left: 27%;
-    bottom: 30%;
+    bottom: 35%;
 }
 div#bola:hover {
     animation-name: bola;
@@ -62,24 +62,78 @@ div#bola:hover {
         height: 165px;
     }
     to {
-        width: 49%;
-        height: 30%;
+        width: 48%;
+        height: 28%;
     }
 }
 
 @keyframes bola2 {
     from {
-        width: 49%;
-        height: 30%;
+        width: 48%;
+        height: 28%;
     }
     to {
         width: 46%;
         height: 165px;
     }
 }
+section#cima {
+    background-image: url('../imagens/img-menu/madeira.png');
+    background-color: #251305da;
+    background-size: contain;
+    position: absolute;
+    top: 0px;
+    margin: 0px;
+    height: 62px;
+    width: 100vw;
+    color: white;
+}
+#gol {
+    margin: 15px 10px 10px 35px;
+    width: 80px;
+    border-style: ridge;
+    border-color: #140b05;
+    text-align: right;
+}
+#mini_bola {
+    width: 20px;
+    height: 20px;
+    background-image: url('../imagens/img-peq/bola-peq.png');
+    background-size: cover;
+    position: absolute;
+    top: 17px;
+    left: 38px;
+}
+#moeda {
+    width: 80px;
+    border-style: ridge;
+    border-color: #140b05;
+    text-align: right;
+    position: fixed;
+    left: 150px;
+    top: 15px;
+}
+#mini_moeda {
+    width: 17px;
+    height: 17px;
+    background-image: url('../imagens/img-peq/moeda2.png');
+    background-size: cover;
+    position: absolute;
+    top: 18px;
+    left: 155px;
+}
 
+#config {
+    width: 30px;
+    height: 30px;
+    background-image: url('../imagens/img-menu/config.png');
+    background-size: cover;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
 nav#menu {
-    background-image: url('../imagens/madeira.png');
+    background-image: url('../imagens/img-menu/madeira.png');
     background-color: #251305da;
     background-size: contain;
     position: absolute;
@@ -118,27 +172,27 @@ label {
 }
 
 #treino {
-    background-image: url('../imagens/treino.png');
+    background-image: url('../imagens/img-menu/treino.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 
 }
 #loja {
-    background-image: url('../imagens/loja.png');
+    background-image: url('../imagens/img-menu/loja.png');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
 }
 #algo {
-    background-image: url('../imagens/algo.png');
+    background-image: url('../imagens/img-menu/algo.png');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
 }
 
 section.upgrades {
-    background-image: url('../imagens/madeira.png');
+    background-image: url('../imagens/img-menu/madeira.png');
     background-size: contain;
     background-color: #251305;
     min-width: 100vw;
@@ -150,7 +204,7 @@ section.upgrades {
 }
 
 section#buff {
-    background-image: url('../imagens/madeira.png');
+    background-image: url('../imagens/img-menu/madeira.png');
     background-size: contain;
     background-color: #251305;
     min-width: 100vw;
@@ -162,7 +216,7 @@ section#buff {
 }
 
 section#powerup {
-    display: block;
+    display: none;
     position: absolute;
     right: 5px;
     top: 50px;
@@ -232,7 +286,7 @@ input.powerup:hover {
 }
 
 input.buffs {
-    background-image: url('../imagens/tabua1.png');
+    background-image: url('../imagens/img-upgrades/tabua1.png');
     background-size: contain;
     background-color: #361515;
     border-color: rgb(68, 29, 29);
@@ -274,13 +328,13 @@ input.buffs:hover {
     background-color: rgb(58, 28, 28);
 }
 input.buffs:disabled {
-    background-image: url('../imagens/tabua2.png');
+    background-image: url('../imagens/img-upgrades/tabua2.png');
     background-color: rgba(75, 50, 50, 0.548);
     border-color: rgba(48, 30, 30, 0.61);
 }
 
 input.upgrades{
-    background-image: url('../imagens/tabua1.png');
+    background-image: url('../imagens/img-upgrades/tabua1.png');
     background-size: contain;
     color: rgb(255, 0, 0);
     background-color: rgb(54, 21, 21);
@@ -297,14 +351,14 @@ input.upgrades{
 }
 
 input.upgrades:disabled {
-    background-image: url('../imagens/tabua2.png');
+    background-image: url('../imagens/img-upgrades/tabua2.png');
     background-color: #4b3232;
     border-color: rgba(48, 30, 30, 0.61);
     color: rgba(255, 0, 0, 0.767);
 }
 
 .fechar {
-    background-image: url('../imagens/x.png');
+    background-image: url('../imagens/img-menu/x.png');
     background-position: center;
     background-size: cover;
     position: absolute;
