@@ -43,6 +43,21 @@ var valor_meia = 1000000
 var valor_calção = 1200000
 var valor_braçadeira = 1700000
 
+// Nível dos upgrades
+var nvlpasse_html = document.getElementById('nvlpasse')
+var nvlchute_html = document.getElementById('nvlchute')
+var nvlescanteio_html = document.getElementById('nvlescanteio')
+var nvllateral_html = document.getElementById('nvllateral')
+var nvlcabecada_html = document.getElementById('nvlcabecada')
+var nvlagarrar_html = document.getElementById('nvlagarrar')
+
+var nvlpasse = 0
+var nvlchute = 0
+var nvlescanteio = 0
+var nvllateral = 0
+var nvlcabecada = 0
+var nvlagarrar = 0
+
 // Quanto cada um gera obs. Valor inicial = 0
 var passe = 0
 var chutes = 0
@@ -284,6 +299,7 @@ function powerup(click) {
 function verif_upgrade(clicado) {
     if (clicado == 'chute') {
         gols -= valor_chute
+        nvlchute_html.innerHTML = `Nvl.${nvlchute+=1}`
         if (gols < valor_chute) {
             chute_html.disabled = true
             chute_html.style.color = 'rgba(255, 0, 0, 0.767)'
@@ -312,6 +328,7 @@ function verif_upgrade(clicado) {
     }
     else if (clicado == 'escanteio') {
         gols -= valor_escanteio
+        nvlescanteio_html.innerHTML = `Nvl.${nvlescanteio+=1}`
         if (gols < valor_chute) {
             chute_html.disabled = true
             chute_html.style.color = 'rgba(255, 0, 0, 0.767)'
@@ -342,6 +359,7 @@ function verif_upgrade(clicado) {
     }
     else if (clicado == 'passe') {
         gols -= valor_passe
+        nvlpasse_html.innerHTML = `Nvl.${nvlpasse+=1}`
         if (gols < valor_passe) {
             passe_html.disabled = true
             passe_html.style.color = 'rgba(255, 0, 0, 0.767)'
@@ -373,6 +391,7 @@ function verif_upgrade(clicado) {
     }
     else if (clicado == 'lateral') {
         gols -= valor_lateral
+        nvllateral_html.innerHTML = `Nvl.${nvllateral+=1}`
         if (gols < valor_chute) {
             chute_html.disabled = true
             chute_html.style.color = 'rgba(255, 0, 0, 0.767)'
@@ -403,6 +422,7 @@ function verif_upgrade(clicado) {
     }
     else if (clicado == 'cabeçada') {
         gols -= valor_cabeçada
+        nvlcabecada_html.innerHTML = `Nvl.${nvlcabecada+=1}`
         if (gols < valor_chute) {
             chute_html.disabled = true
             chute_html.style.color = 'rgba(255, 0, 0, 0.767)'
@@ -433,6 +453,7 @@ function verif_upgrade(clicado) {
     }
     else if (clicado == 'agarrar') {
         gols -= valor_agarrar
+        nvlagarrar_html.innerHTML = `Nvl.${nvlagarrar+=1}`
         if (gols < valor_chute) {
             chute_html.disabled = true
             chute_html.style.color = 'rgba(255, 0, 0, 0.767)'
@@ -646,12 +667,12 @@ function aut() {
         cabeçada_html.style.color = 'rgb(54, 158, 54)'
     }
 
-    chute_html.value = `Chute ${valor_chute.toFixed(0)}`
-    passe_html.value = `Passe ${valor_passe.toFixed(0)}`
-    escanteio_html.value = `Escanteio ${valor_escanteio.toFixed(0)}`
-    lateral_html.value = `Lateral ${valor_lateral.toFixed(0)}`
-    cabeçada_html.value = `Cabeçada ${valor_cabeçada.toFixed(0)}`
-    agarrar_html.value = `Agarrar ${valor_agarrar.toFixed(0)}`
+    chute_html.value = `   Chute        ${valor_chute.toFixed(0)}`
+    passe_html.value = `   Passe       ${valor_passe.toFixed(0)}`
+    escanteio_html.value = `   Escanteio       ${valor_escanteio.toFixed(0)}`
+    lateral_html.value = `   Lateral       ${valor_lateral.toFixed(0)}`
+    cabeçada_html.value = `   Cabeçada       ${valor_cabeçada.toFixed(0)}`
+    agarrar_html.value = `   Agarrar       ${valor_agarrar.toFixed(0)}`
     contador.innerHTML = `<p>Gols: ${gols.toFixed(0)}</p><p id='cps'>Gols por segundo: ${cps.toFixed(2)}</p>`
     cont_gols.innerHTML = `${gols.toFixed(0)}`
 }

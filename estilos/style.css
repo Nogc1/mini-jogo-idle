@@ -91,8 +91,7 @@ section#cima {
 #gol {
     margin: 15px 10px 10px 35px;
     width: 80px;
-    border-style: ridge;
-    border-color: #140b05;
+    border: 5px ridge #140b05;
     text-align: right;
 }
 #mini_bola {
@@ -101,13 +100,12 @@ section#cima {
     background-image: url('../imagens/img-peq/bola-peq.png');
     background-size: cover;
     position: absolute;
-    top: 17px;
+    top: 18px;
     left: 38px;
 }
 #moeda {
     width: 80px;
-    border-style: ridge;
-    border-color: #140b05;
+    border: 5px ridge #140b05;
     text-align: right;
     position: fixed;
     left: 150px;
@@ -119,7 +117,7 @@ section#cima {
     background-image: url('../imagens/img-peq/moeda2.png');
     background-size: cover;
     position: absolute;
-    top: 18px;
+    top: 20px;
     left: 155px;
 }
 
@@ -192,8 +190,9 @@ label {
 }
 
 section.upgrades {
-    background-image: url('../imagens/img-menu/madeira.png');
-    background-size: contain;
+    background-image: url('../imagens/img-temas/background.png');
+    background-size: cover;
+    background-position: center;
     background-color: #251305;
     min-width: 100vw;
     height: 100vh;
@@ -341,9 +340,10 @@ input.upgrades{
     border-color: rgb(68, 29, 29);
     font-size: 18px;
     display: block;
-    height: 50px;
+    height: 70px;
     width: 330px;
     margin: 10px 15px 0px 15px;
+    text-align: left;
 }
 
 .upgrades strong {
@@ -367,4 +367,71 @@ input.upgrades:disabled {
     display: block;
     height: 30px;
     width: 30px;
+}
+.imgmini {
+    background-image: url('../imagens/img-peq/bola-peq.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 20px;
+    width: 20px;
+    position: absolute;
+}
+
+#imgmini1 {
+    top: 75px;
+    left: 90px;
+}
+#imgmini2 {
+    top: 155px;
+    left: 90px;
+}
+#imgmini3 {
+    top: 235px;
+    left: 120px;
+}
+#imgmini4 {
+    top: 315px;
+    left: 95px;
+}
+#imgmini5 {
+    top: 395px;
+    left: 123px;
+}
+#imgmini6 {
+    top: 475px;
+    left: 100px;
+}
+.nvl {
+    font-size: 18px;
+}
+#nvlpasse {
+    position: absolute;
+    top: 78px;
+    right: 100px;
+}
+
+#nvlchute {
+    position: absolute;
+    top: 158px;
+    right: 100px;
+}
+#nvlescanteio {
+    position: absolute;
+    top: 238px;
+    right: 100px;
+}
+#nvllateral {
+    position: absolute;
+    top: 318px;
+    right: 100px;
+}
+#nvlcabecada {
+    position: absolute;
+    top: 398px;
+    right: 100px;
+}
+#nvlagarrar {
+    position: absolute;
+    top: 478px;
+    right: 100px;
 }
