@@ -91,7 +91,7 @@ section#cima {
 #gol {
     margin: 15px 10px 10px 35px;
     width: 80px;
-    border: 5px ridge #140b05;
+    border: 5px inset #140b05;
     text-align: right;
 }
 #mini_bola {
@@ -105,7 +105,7 @@ section#cima {
 }
 #moeda {
     width: 80px;
-    border: 5px ridge #140b05;
+    border: 5px inset #140b05;
     text-align: right;
     position: fixed;
     left: 150px;
@@ -203,11 +203,12 @@ section.upgrades {
 }
 
 section#buff {
-    background-image: url('../imagens/img-menu/madeira.png');
+    background-image: url('../imagens/img-upgrades/prateleira.png');
     background-size: contain;
     background-color: #251305;
     min-width: 100vw;
     height: 100vh;
+    max-width: 100vw;
     color: rgb(209, 209, 209);
     position: absolute;
     top: 0px;
@@ -291,7 +292,8 @@ input.buffs {
     border-color: rgb(68, 29, 29);
     width: 50px;
     height: 50px;
-    margin: 10px 0px 10px 5px;
+    margin: 10px 0px 0px 30px;
+    display: block;
 }
 #chuteira {
     background-image: url('../imagens/img-buffs/chuteira.png');

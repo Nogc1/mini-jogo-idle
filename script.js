@@ -104,7 +104,7 @@ function abrir(opcao) {
         upgrade.style.display = 'block'
     }
     if (opcao == 'algo') {
-        window.alert('NAOEVIRUS.exe foi instalado com sucesso.     :)')
+        window.alert('VirusDoZap.exe foi instalado com sucesso.     :)')
     }
 }
 function configuracao() {
@@ -451,7 +451,7 @@ function verif_upgrade(clicado) {
             gols = 0
         }
     }
-    else if (clicado == 'agarrar') {
+    else if (clicado == 'agarrar') {  
         gols -= valor_agarrar
         nvlagarrar_html.innerHTML = `Nvl.${nvlagarrar+=1}`
         if (gols < valor_chute) {
