@@ -15,7 +15,7 @@
 
 body {
     background-image: url('../imagens/img-temas/background.png');
-    background-size: cover ;
+    background-size: cover;
     background-repeat: no-repeat;
     background-color: rgb(54, 158, 54);
     background-position: center;
@@ -88,11 +88,51 @@ section#cima {
     width: 100vw;
     color: white;
 }
+
+#info_bola {
+    background-color: rgb(80, 43, 1);
+    color: whitesmoke;
+    max-width: 100px;
+    height: 80px;
+    font-size: 13px;
+    position: absolute;
+    left: 80px;
+    top: 10px;
+    display: none;
+    border: groove white 2px;
+}
+#info_bola p {
+    max-width: 97px;
+    height: 97px;
+    white-space: wrap;
+    margin: 5px;
+}
+
+#info_moeda {
+    background-color: rgb(80, 43, 1);
+    color: whitesmoke;
+    max-width: 100px;
+    height: 80px;
+    font-size: 13px;
+    position: absolute;
+    left: 100px;
+    top: 10px;
+    display: none;
+    border: groove white 2px;
+}
+#info_moeda p {
+    max-width: 97px;
+    height: 97px;
+    white-space: wrap;
+    margin: 5px;
+}
 #gol {
-    margin: 15px 10px 10px 35px;
+    position: fixed;
     width: 80px;
     border: 5px inset #140b05;
     text-align: right;
+    top: 15px;
+    left: 34px;
 }
 #mini_bola {
     width: 20px;

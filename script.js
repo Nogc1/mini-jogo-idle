@@ -79,6 +79,10 @@ var gols = 0
 var gols_valor = 1
 var cps = 0
 
+// Informações adicionais
+var mini_bola = document.getElementById('mini_bola')
+var mini_moeda = document.getElementById('mini_moeda')
+
 // Atualiza o contador e as variaveis para o novo valor através da função aut
 var automatic = setInterval(aut, 1000)
 automatic
@@ -91,6 +95,30 @@ escanteio_html.disabled = true
 lateral_html.disabled = true
 cabeçada_html.disabled = true
 agarrar_html.disabled = true
+
+var info_bola = document.createElement('div')
+info_bola.id = 'info_bola'
+info_bola.innerHTML = '<p>Você pode obter Gols clicando na bola</p>'
+document.body.appendChild(info_bola)
+
+mini_bola.addEventListener('touchstart', function() {
+   info_bola.style.display = 'block'
+})
+mini_bola.addEventListener('touchend', function() {
+    info_bola.style.display = 'none'
+})
+
+var info_moeda = document.createElement('div')
+info_moeda.id = 'info_moeda'
+info_moeda.innerHTML = '<p>Você pode conseguir Moedas</p>'
+document.body.appendChild(info_moeda)
+
+mini_moeda.addEventListener('touchstart', ()=> {
+    info_moeda.style.display = 'block'
+})
+mini_moeda.addEventListener('touchend', ()=> {
+    info_moeda.style.display = 'none'
+})
 
 function fechar(o) {
     upgrade.style.display = 'none'
