@@ -243,7 +243,6 @@ section.upgrades {
 }
 
 section#buff {
-    background-image: url('../imagens/img-upgrades/prateleira.png');
     background-size: contain;
     background-color: #251305;
     min-width: 100vw;
@@ -253,6 +252,7 @@ section#buff {
     position: absolute;
     top: 0px;
     display: none;
+    white-space: wrap;
 }
 
 section#powerup {
@@ -314,6 +314,7 @@ div#car {
 #buff h2 {
     font-size: 36px;
     text-align: center;
+    margin-top: 30px;
 }
 #upgrade h2 {
     font-size: 36px;
@@ -332,8 +333,8 @@ input.buffs {
     border-color: rgb(68, 29, 29);
     width: 50px;
     height: 50px;
-    margin: 10px 0px 0px 30px;
-    display: block;
+    margin: 50px 0px 0px 30px;
+    display: inline;
 }
 #chuteira {
     background-image: url('../imagens/img-buffs/chuteira.png');
@@ -476,4 +477,57 @@ input.upgrades:disabled {
     position: absolute;
     top: 478px;
     right: 100px;
+}
+
+#preco_item1 {
+    display: block;
+    position: absolute;
+    top: 180px;
+    left: 40px;
+    color: white;
+}
+#preco_item2 {
+    display: none;
+}
+#preco_item3 {
+    display: none;
+}
+#preco_item4 {
+    display: none;
+}
+#preco_item5 {
+    display: none;
+}
+#preco_item6 {
+    display: none;
+}
+#preco_item7 {
+    display: none;
+}
+#preco_item8 {
+    display: none;
+}
+#preco_item9 {
+    display: none;
+}
+#preco_item10 {
+    display: none;
+}
+#preco_item11 {
+    display: none;
+}
+#preco_item12 {
+    display: none;
+}
+#preco_item13 {
+    display: none;
+}
+#preco_item14 {
+    display: none;
+}
+#preco_item15 {
+    display: none;
+}
+#preco_item16 {
+    display: none;
 }
