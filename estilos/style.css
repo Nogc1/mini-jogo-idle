@@ -483,51 +483,111 @@ input.upgrades:disabled {
     display: block;
     position: absolute;
     top: 180px;
-    left: 40px;
+    left: 30px;
     color: white;
 }
 #preco_item2 {
-    display: none;
+    display: block;
+    position: absolute;
+    color: white;
+    top: 180px;
+    left: 120px;
 }
 #preco_item3 {
-    display: none;
+    display: block;
+    position: absolute;
+    color: white;
+    top: 180px;
+    left: 200px;
 }
 #preco_item4 {
-    display: none;
+    display: block;
+    position: absolute;
+    color: white;
+    top: 180px;
+    left: 280px;
 }
 #preco_item5 {
-    display: none;
+    display: block;
+    position: absolute;
+    color: white;
+    top: 285px;
+    left: 30px;
 }
 #preco_item6 {
-    display: none;
+    display: block;
+    position: absolute;
+    color: white;
+    top: 285px;
+    left: 120px;
 }
 #preco_item7 {
-    display: none;
+    display: block;
+    position: absolute;
+    color: white;
+    top: 285px;
+    left: 200px;
 }
 #preco_item8 {
-    display: none;
+    display: block;
+    position: absolute;
+    color: white;
+    top: 285px;
+    left: 280px;
 }
 #preco_item9 {
-    display: none;
+    display: block;
+    position: absolute;
+    color: white;
+    top: 390px;
+    left: 30px;
 }
 #preco_item10 {
-    display: none;
+    display: block;
+    position: absolute;
+    color: white;
+    top: 390px;
+    left: 120px;
 }
 #preco_item11 {
-    display: none;
+    display: block;
+    position: absolute;
+    color: white;
+    top: 390px;
+    left: 200px;
 }
 #preco_item12 {
-    display: none;
+    display: block;
+    position: absolute;
+    color: white;
+    top: 390px;
+    left: 280px;
 }
 #preco_item13 {
-    display: none;
+    display: block;
+    position: absolute;
+    color: white;
+    top: 495px;
+    left: 30px;
 }
 #preco_item14 {
-    display: none;
+    display: block;
+    position: absolute;
+    color: white;
+    top: 495px;
+    left: 120px;
 }
 #preco_item15 {
-    display: none;
+    display: block;
+    position: absolute;
+    color: white;
+    top: 495px;
+    left: 200px;
 }
 #preco_item16 {
-    display: none;
+    display: block;
+    position: absolute;
+    color: white;
+    top: 495px;
+    left: 280px;
 }

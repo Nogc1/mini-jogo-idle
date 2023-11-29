@@ -132,7 +132,7 @@ function abrir(opcao) {
         upgrade.style.display = 'block'
     }
     if (opcao == 'algo') {
-        window.alert('NaoéVirus.exe foi instalado com sucesso.     :)')
+        window.alert('Virus.exe foi instalado com sucesso.  :)')
     }
 }
 function configuracao() {
