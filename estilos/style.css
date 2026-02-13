@@ -256,7 +256,7 @@ section#buff {
 }
 
 section#powerup {
-    display: none;
+    display: block;
     position: absolute;
     right: 5px;
     top: 50px;
